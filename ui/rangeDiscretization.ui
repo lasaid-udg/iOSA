@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>928</width>
+    <height>662</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>928</width>
+    <height>662</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>16777215</width>
+    <height>16777215</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QFrame {
+	background-color: rgb(255, 255, 255);
+}
+
+QSlider::groove:horizontal {
+    border: 1px solid;
+	border-color: rgb(17, 0, 255);
+    height: 10px;
+    margin: 0px;
+}
+
+QSlider::handle:horizontal {
+    background-color: rgb(11, 175, 225);
+    border: 1px solid;
+	border-color: rgb(11, 175, 225);
+    height: px;
+    width: 8px;
+	margin: -15px 0px;
+}
+
+QWidget {
+	font: 57 10pt Manrope medium;
+	background-color: rgb(255, 255, 255);
+}
+
+QFrame {
+	border-radius: none;
+}
+
+QPushButton {
+	padding: 5px;
+	border-width: 2px;
+	border-style: solid;
+	border-color: rgb(11, 173, 226);
+	background-color: rgb(13, 195, 255);
+	border-radius: 12px;
+}
+
+QPushButton:hover {
+	background-color: rgb(11, 173, 226);
+}
+
+QPushButton:pressed {
+	border-color: (9, 146, 191);
+	background-color:rgb(9, 146, 191);
+}
+
+QScrollBar:vertical {
+	border: none;
+	background-color: rgb(205, 205, 205);
+	width: 14px;
+	margin: 15px 0 15px 0;
+	border-radius: 0x;
+}
+
+QScrollBar::handle:vertical {
+	background-color: rgb(205, 205, 205);
+	border-radius: 7px;
+}
+
+QScrollBar::handle:vertical:hover {
+	background-color: rgb(7, 119, 156)
+}
+
+QScrollBar::handle:vertical:pressed {
+	background-color: rgb(9, 139, 182);
+}
+
+/* TOP BUTTON*/
+
+QScrollBar::sub-line:vertical {
+	border: none;
+	background-color: rgb(7, 119, 156);
+	height: 15px;
+	border-top-left-radius: 7px;
+	border-top-right-radius: 7px;
+	subcontrol-position: top;
+	subcontrol-origin: margin;
+}
+
+QScrollBar::sub-line:vertical:hover {
+	background-color: rgb(205, 205, 205);
+}
+
+QScrollBar::sub-line:vertical:pressed {
+	background-color: rgb(11, 170, 223);
+}
+
+/*BOTTOM BUTTON*/
+
+QScrollBar::add-line:vertical {
+	border: none;
+	background-color: rgb(7, 119, 156);
+	height: 15px;
+	border-bottom-left-radius: 7px;
+	border-bottom-right-radius: 7px;
+	subcontrol-position: bottom;
+	subcontrol-origin: margin;
+}
+
+QScrollBar::add-line:vertical:hover {
+	background-color: rgb(205, 205, 205);
+}
+
+QScrollBar::add-line:vertical:pressed {
+	background-color: rgb(11, 170, 223);
+}
+
+/*RESET ARROWS*/
+
+QScrollBar::up-arrow:vertical, QScrollBar::down-arrow:vertical {
+	background-color: none;
+}
+
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
+	background-color: none;
+}
+</string>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout">
+   <item>
+    <widget class="QFrame" name="frame">
+     <property name="styleSheet">
+      <string notr="true">QLabel {
+	font-size: 20px;
+}
+</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <widget class="QScrollArea" name="scrollArea">
+        <property name="widgetResizable">
+         <bool>true</bool>
+        </property>
+        <widget class="QWidget" name="scrollAreaWidgetContents">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>892</width>
+           <height>587</height>
+          </rect>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout">
+          <item>
+           <layout class="QGridLayout" name="fieldsGridLayout">
+            <property name="horizontalSpacing">
+             <number>0</number>
+            </property>
+            <property name="verticalSpacing">
+             <number>4</number>
+            </property>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="applyRangesButton">
+        <property name="text">
+         <string>Aceptar</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

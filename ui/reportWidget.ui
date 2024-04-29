@@ -1,0 +1,2366 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1080</width>
+    <height>720</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1080</width>
+    <height>720</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>iOSA - Load Polygraphy</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget {
+	
+	background-color: rgb(255, 255, 255);
+}
+
+QScrollBar:vertical {
+	border: none;
+	background-color: rgb(205, 205, 205);
+	width: 14px;
+	margin: 15px 0 15px 0;
+	border-radius: 0x;
+}
+
+QScrollBar::handle:vertical {
+	background-color: rgb(205, 205, 205);
+	border-radius: 7px;
+}
+
+QScrollBar::handle:vertical:hover {
+	background-color: rgb(7, 119, 156)
+}
+
+QScrollBar::handle:vertical:pressed {
+	background-color: rgb(9, 139, 182);
+}
+
+/* TOP BUTTON*/
+
+QScrollBar::sub-line:vertical {
+	border: none;
+	background-color: rgb(7, 119, 156);
+	height: 15px;
+	border-top-left-radius: 7px;
+	border-top-right-radius: 7px;
+	subcontrol-position: top;
+	subcontrol-origin: margin;
+}
+
+QScrollBar::sub-line:vertical:hover {
+	background-color: rgb(205, 205, 205);
+}
+
+QScrollBar::sub-line:vertical:pressed {
+	background-color: rgb(11, 170, 223);
+}
+
+/*BOTTOM BUTTON*/
+
+QScrollBar::add-line:vertical {
+	border: none;
+	background-color: rgb(7, 119, 156);
+	height: 15px;
+	border-bottom-left-radius: 7px;
+	border-bottom-right-radius: 7px;
+	subcontrol-position: bottom;
+	subcontrol-origin: margin;
+}
+
+QScrollBar::add-line:vertical:hover {
+	background-color: rgb(205, 205, 205);
+}
+
+QScrollBar::add-line:vertical:pressed {
+	background-color: rgb(11, 170, 223);
+}
+
+/*RESET ARROWS*/
+
+QScrollBar::up-arrow:vertical, QScrollBar::down-arrow:vertical {
+	background-color: none;
+}
+
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
+	background-color: none;
+}
+</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QFrame" name="mainFrame">
+     <property name="styleSheet">
+      <string notr="true">QFrame {
+	background-color: rgb(255, 255, 255);
+}
+
+QScrollBar:vertical {
+	background-color: rgb(255, 255, 255);
+}
+
+QScrollBar:horizontal {
+	background-color: rgb(255, 255, 255);
+}
+
+QPushButton {
+	padding: 5px;
+	border-width: 2px;
+	border-style: solid;
+	border-color: rgb(11, 173, 226);
+	background-color: rgb(13, 195, 255);
+	border-radius: 12px;
+}
+
+QPushButton:hover {
+	background-color: rgb(11, 173, 226);
+}
+
+QPushButton:pressed {
+	border-color: (9, 146, 191);
+	background-color:rgb(9, 146, 191);
+}</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <layout class="QGridLayout" name="gridLayout">
+        <item row="10" column="8">
+         <spacer name="horizontalSpacer_20">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="10" column="4">
+         <spacer name="horizontalSpacer_24">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="10" column="9">
+         <spacer name="horizontalSpacer_19">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="0" column="12">
+         <spacer name="horizontalSpacer">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="3" column="0">
+         <spacer name="verticalSpacer_8">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="5" column="0">
+         <spacer name="verticalSpacer_6">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="0" column="9">
+         <spacer name="horizontalSpacer_5">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="0" column="1">
+         <spacer name="horizontalSpacer_13">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="9" column="9" colspan="3">
+         <widget class="QPushButton" name="updatePushButton">
+          <property name="text">
+           <string>Save Study</string>
+          </property>
+         </widget>
+        </item>
+        <item row="10" column="1">
+         <spacer name="horizontalSpacer_27">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="10" column="0">
+         <spacer name="horizontalSpacer_28">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="1" column="0">
+         <spacer name="verticalSpacer_3">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="0" column="4">
+         <spacer name="horizontalSpacer_10">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="8" column="0">
+         <spacer name="verticalSpacer">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="0" column="5">
+         <spacer name="horizontalSpacer_9">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="4" column="1" rowspan="5" colspan="11">
+         <widget class="QScrollArea" name="scrollArea">
+          <property name="widgetResizable">
+           <bool>true</bool>
+          </property>
+          <widget class="QWidget" name="scrollAreaWidgetContents">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>864</width>
+             <height>1268</height>
+            </rect>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_4">
+            <item>
+             <widget class="QFrame" name="formFrame">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>1250</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QScrollBar:vertical {
+	background-color: rgb(255, 255, 255);
+}
+
+QScrollBar:horizontal {
+	background-color: rgb(255, 255, 255);
+}
+
+QLineEdit {
+	background-color: rgb(255, 255, 255);
+	border-width: 2px;
+	border-style: solid;
+	border-color: none;
+	border-bottom-color: rgb(192, 192, 192);
+	border-radius: 15px;
+}
+QLineEdit:hover {
+	border-bottom-color: rgb(140, 140, 140);
+}
+</string>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::StyledPanel</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Raised</enum>
+              </property>
+              <layout class="QVBoxLayout" name="verticalLayout_5">
+               <item>
+                <layout class="QGridLayout" name="gridLayout_2">
+                 <item row="10" column="1" colspan="2">
+                  <widget class="QLabel" name="hypopneaIndex">
+                   <property name="text">
+                    <string>Hypopnea index:</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="6" column="8" colspan="2">
+                  <widget class="QLineEdit" name="indeterminatedApneasLineEdit">
+                   <property name="layoutDirection">
+                    <enum>Qt::RightToLeft</enum>
+                   </property>
+                   <property name="readOnly">
+                    <bool>true</bool>
+                   </property>
+                   <property name="placeholderText">
+                    <string>-</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="16" column="1" colspan="2">
+                  <widget class="QLabel" name="minorDesaturation">
+                   <property name="text">
+                    <string>Desaturación menor:</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="25" column="0">
+                  <spacer name="verticalSpacer_15">
+                   <property name="orientation">
+                    <enum>Qt::Vertical</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>20</width>
+                     <height>40</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item row="6" column="3" colspan="2">
+                  <widget class="QLineEdit" name="IAILineEdit">
+                   <property name="layoutDirection">
+                    <enum>Qt::RightToLeft</enum>
+                   </property>
+                   <property name="readOnly">
+                    <bool>true</bool>
+                   </property>
+                   <property name="placeholderText">
+                    <string>-</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="22" column="0">
+                  <spacer name="verticalSpacer_12">
+                   <property name="orientation">
+                    <enum>Qt::Vertical</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>20</width>
+                     <height>40</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item row="7" column="0">
+                  <spacer name="verticalSpacer_28">
+                   <property name="orientation">
+                    <enum>Qt::Vertical</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>20</width>
+                     <height>40</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item row="16" column="0">
+                  <spacer name="verticalSpacer_19">
+                   <property name="orientation">
+                    <enum>Qt::Vertical</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>20</width>
+                     <height>40</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item row="28" column="4">
+                  <widget class="QLabel" name="defaultDesaturation">
+                   <property name="text">
+                    <string>Dasaturación:</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="5" column="1" colspan="2">
+                  <widget class="QLabel" name="apneasIndexLabel">
+                   <property name="text">
+                    <string>Apneas Index</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="6" column="0">
+                  <spacer name="verticalSpacer_29">
+                   <property name="orientation">
+                    <enum>Qt::Vertical</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>20</width>
+                     <height>40</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item row="5" column="8" colspan="2">
+                  <widget class="QLineEdit" name="apneasLineEdit">
+                   <property name="layoutDirection">
+                    <enum>Qt::RightToLeft</enum>
+                   </property>
+                   <property name="readOnly">
+                    <bool>true</bool>
+                   </property>
+                   <property name="placeholderText">
+                    <string>-</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="27" column="6">
+                  <widget class="QLabel" name="defaultHypopnea">
+                   <property name="text">
+                    <string>Hipoapnea:</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="4" column="6" colspan="2">
+                  <widget class="QLabel" name="respirations">
+                   <property name="text">
+                    <string>Breaths:</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="34" column="2">
+                  <spacer name="horizontalSpacer_39">
+                   <property name="orientation">
+                    <enum>Qt::Horizontal</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>40</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item row="9" column="8" colspan="2">
+                  <widget class="QLineEdit" name="mixedApneasLineEdit">
+                   <property name="layoutDirection">
+                    <enum>Qt::RightToLeft</enum>
+                   </property>
+                   <property name="readOnly">
+                    <bool>true</bool>
+                   </property>
+                   <property name="placeholderText">
+                    <string>-</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="8" column="1">
+                  <widget class="QLabel" name="IAC">
+                   <property name="text">
+                    <string>ÍAC:</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="0" column="2">
+                  <spacer name="horizontalSpacer_35">
+                   <property name="orientation">
+                    <enum>Qt::Horizontal</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>40</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item row="20" column="6" rowspan="2" colspan="2">
+                  <widget class="QLabel" name="saturation80">
+                   <property name="text">
+                    <string>Saturación &lt;= 80% :</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="34" column="6">
+                  <spacer name="horizontalSpacer_43">
+                   <property name="orientation">
+                    <enum>Qt::Horizontal</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>40</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item row="33" column="0">
+                  <spacer name="verticalSpacer_48">
+                   <property name="orientation">
+                    <enum>Qt::Vertical</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>20</width>
+                     <height>40</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item row="23" column="6" colspan="2">
+                  <widget class="QLabel" name="label">
+                   <property name="text">
+                    <string>Periodo de evaluación de flujo:</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="4" column="0">
+                  <spacer name="verticalSpacer_31">
+                   <property name="orientation">
+                    <enum>Qt::Vertical</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>20</width>
+                     <height>40</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item row="0" column="5">
+                  <spacer name="horizontalSpacer_32">
+                   <property name="orientation">
+                    <enum>Qt::Horizontal</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>40</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item row="17" column="8" colspan="2">
+                  <widget class="QLineEdit" name="saturation90PerLineEdit">
+                   <property name="placeholderText">
+                    <string>-</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="9" column="1">
+                  <widget class="QLabel" name="IAM">
+                   <property name="text">
+                    <string>ÍAM:</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="6" column="6" colspan="2">
+                  <widget class="QLabel" name="indeterminatedApneas">
+                   <property name="text">
+                    <string>Indeterminate apneas:</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="9" column="0">
+                  <spacer name="verticalSpacer_26">
+                   <property name="orientation">
+                    <enum>Qt::Vertical</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>20</width>
+                     <height>40</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item row="27" column="7" colspan="3">
+                  <widget class="QLineEdit" name="defaultHypopneaLineEdit">
+                   <property name="layoutDirection">
+                    <enum>Qt::LeftToRight</enum>
+                   </property>
+                   <property name="readOnly">
+                    <bool>true</bool>
+                   </property>
+                   <property name="placeholderText">
+                    <string>-</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="13" column="6" colspan="2">
+                  <widget class="QLabel" name="snoringEvents">
+                   <property name="text">
+                    <string>Eventos de ronquidos:</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="17" column="0">
+                  <spacer name="verticalSpacer_18">
+                   <property name="orientation">
+                    <enum>Qt::Vertical</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>20</width>
+                     <height>40</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item row="30" column="0">
+                  <spacer name="verticalSpacer_45">
+                   <property name="orientation">
+                    <enum>Qt::Vertical</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>20</width>
+                     <height>40</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item row="9" column="6" colspan="2">
+                  <widget class="QLabel" name="mixedApneas">
+                   <property name="text">
+                    <string>Mixed apneas:</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="16" column="6" rowspan="2" colspan="2">
+                  <widget class="QLabel" name="saturation90Num">
+                   <property name="text">
+                    <string>Saturación &lt;= 90%:</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="11" column="0">
+                  <spacer name="verticalSpacer_24">
+                   <property name="orientation">
+                    <enum>Qt::Vertical</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>20</width>
+                     <height>40</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item row="2" column="0">
+                  <spacer name="verticalSpacer_33">
+                   <property name="orientation">
+                    <enum>Qt::Vertical</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>20</width>
+                     <height>40</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item row="8" column="3" colspan="2">
+                  <widget class="QLineEdit" name="IACLineEdit">
+                   <property name="layoutDirection">
+                    <enum>Qt::RightToLeft</enum>
+                   </property>
+                   <property name="readOnly">
+                    <bool>true</bool>
+                   </property>
+                   <property name="placeholderText">
+                    <string>-</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="29" column="1" colspan="4">
+                  <widget class="QLabel" name="commentsLabel">
+                   <property name="text">
+                    <string>Comentarios:</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="34" column="4">
+                  <spacer name="horizontalSpacer_41">
+                   <property name="orientation">
+                    <enum>Qt::Horizontal</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>40</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item row="26" column="0">
+                  <spacer name="verticalSpacer_41">
+                   <property name="orientation">
+                    <enum>Qt::Vertical</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>20</width>
+                     <height>40</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item row="13" column="8" colspan="2">
+                  <widget class="QLineEdit" name="snoringEventsLineEdit">
+                   <property name="layoutDirection">
+                    <enum>Qt::RightToLeft</enum>
+                   </property>
+                   <property name="readOnly">
+                    <bool>true</bool>
+                   </property>
+                   <property name="placeholderText">
+                    <string>-</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="1" column="3" colspan="5" alignment="Qt::AlignHCenter">
+                  <widget class="QLabel" name="analysisLabel">
+                   <property name="styleSheet">
+                    <string notr="true">font-size: 35px;</string>
+                   </property>
+                   <property name="text">
+                    <string>OSA PDF Metrics</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="4" column="1" colspan="2">
+                  <widget class="QLabel" name="IRLabel">
+                   <property name="text">
+                    <string>IR*:</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="0" column="3">
+                  <spacer name="horizontalSpacer_34">
+                   <property name="orientation">
+                    <enum>Qt::Horizontal</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>40</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item row="7" column="3" colspan="2">
+                  <widget class="QLineEdit" name="IAOLineEdit">
+                   <property name="layoutDirection">
+                    <enum>Qt::RightToLeft</enum>
+                   </property>
+                   <property name="readOnly">
+                    <bool>true</bool>
+                   </property>
+                   <property name="placeholderText">
+                    <string>-</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="18" column="0">
+                  <spacer name="verticalSpacer_17">
+                   <property name="orientation">
+                    <enum>Qt::Vertical</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>20</width>
+                     <height>40</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item row="22" column="1" colspan="2">
+                  <widget class="QLabel" name="averagePulseRate">
+                   <property name="text">
+                    <string>Frecuencia de pulso promedio:</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="12" column="1" colspan="2">
+                  <widget class="QLabel" name="lrPercentage">
+                   <property name="text">
+                    <string>%Lim. Flujo Res con ron (LR):</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="15" column="6" colspan="2">
+                  <widget class="QLabel" name="desaturationsNumber">
+                   <property name="text">
+                    <string>N.º de desaturaciones:</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="5" column="3" colspan="2">
+                  <widget class="QLineEdit" name="apneasIndexLineEdit">
+                   <property name="layoutDirection">
+                    <enum>Qt::RightToLeft</enum>
+                   </property>
+                   <property name="readOnly">
+                    <bool>true</bool>
+                   </property>
+                   <property name="placeholderText">
+                    <string>-</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="34" column="10">
+                  <spacer name="horizontalSpacer_47">
+                   <property name="orientation">
+                    <enum>Qt::Horizontal</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>40</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item row="18" column="6" rowspan="2" colspan="2">
+                  <widget class="QLabel" name="saturation85">
+                   <property name="text">
+                    <string>Saturación &lt;= 85% :</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="5" column="6">
+                  <widget class="QLabel" name="apneas">
+                   <property name="text">
+                    <string>Apneas:</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="3" column="3" colspan="2">
+                  <widget class="QLineEdit" name="IAHLineEdit">
+                   <property name="layoutDirection">
+                    <enum>Qt::RightToLeft</enum>
+                   </property>
+                   <property name="readOnly">
+                    <bool>true</bool>
+                   </property>
+                   <property name="placeholderText">
+                    <string>-</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="21" column="0">
+                  <spacer name="verticalSpacer_11">
+                   <property name="orientation">
+                    <enum>Qt::Vertical</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>20</width>
+                     <height>40</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item row="7" column="1">
+                  <widget class="QLabel" name="IAO">
+                   <property name="text">
+                    <string>ÍAO:</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="15" column="1" colspan="2">
+                  <widget class="QLabel" name="averageSaturation">
+                   <property name="text">
+                    <string>Saturación promedio:</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="7" column="6" colspan="2">
+                  <widget class="QLabel" name="obstructiveApneas">
+                   <property name="text">
+                    <string>Obstructive apneas:</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="0" column="9">
+                  <spacer name="horizontalSpacer_16">
+                   <property name="orientation">
+                    <enum>Qt::Horizontal</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>40</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item row="27" column="0">
+                  <spacer name="verticalSpacer_42">
+                   <property name="orientation">
+                    <enum>Qt::Vertical</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>20</width>
+                     <height>40</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item row="24" column="3" colspan="2">
+                  <widget class="QLineEdit" name="CSRLineEdit">
+                   <property name="layoutDirection">
+                    <enum>Qt::RightToLeft</enum>
+                   </property>
+                   <property name="readOnly">
+                    <bool>true</bool>
+                   </property>
+                   <property name="placeholderText">
+                    <string>-</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="3" column="1" colspan="2">
+                  <widget class="QLabel" name="IAHLabel">
+                   <property name="text">
+                    <string>IAH*:</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="16" column="3" colspan="2">
+                  <widget class="QLineEdit" name="minorDesaturationLineEdit">
+                   <property name="layoutDirection">
+                    <enum>Qt::RightToLeft</enum>
+                   </property>
+                   <property name="readOnly">
+                    <bool>true</bool>
+                   </property>
+                   <property name="placeholderText">
+                    <string>-</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="27" column="1">
+                  <widget class="QLabel" name="defaultApnea">
+                   <property name="text">
+                    <string>Apnea:</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="14" column="1" colspan="2">
+                  <widget class="QLabel" name="IDO">
+                   <property name="text">
+                    <string>IDO Índice de Desaturanión
+de Oxígeno*:</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="0" column="6">
+                  <spacer name="horizontalSpacer_31">
+                   <property name="orientation">
+                    <enum>Qt::Horizontal</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>40</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item row="0" column="0">
+                  <spacer name="horizontalSpacer_37">
+                   <property name="orientation">
+                    <enum>Qt::Horizontal</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>40</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item row="10" column="8" colspan="2">
+                  <widget class="QLineEdit" name="hypoapneasLineEdit">
+                   <property name="layoutDirection">
+                    <enum>Qt::RightToLeft</enum>
+                   </property>
+                   <property name="readOnly">
+                    <bool>true</bool>
+                   </property>
+                   <property name="placeholderText">
+                    <string>-</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="21" column="3" colspan="2">
+                  <widget class="QLineEdit" name="maximumPulseRateLineEdit">
+                   <property name="layoutDirection">
+                    <enum>Qt::RightToLeft</enum>
+                   </property>
+                   <property name="readOnly">
+                    <bool>true</bool>
+                   </property>
+                   <property name="placeholderText">
+                    <string>-</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="23" column="8" colspan="2">
+                  <widget class="QLineEdit" name="evaluation_duration_line_edit">
+                   <property name="readOnly">
+                    <bool>true</bool>
+                   </property>
+                   <property name="placeholderText">
+                    <string>-</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="18" column="3" colspan="2">
+                  <widget class="QLineEdit" name="basalSaturationLineEdit">
+                   <property name="layoutDirection">
+                    <enum>Qt::RightToLeft</enum>
+                   </property>
+                   <property name="readOnly">
+                    <bool>true</bool>
+                   </property>
+                   <property name="placeholderText">
+                    <string>-</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="11" column="3" colspan="2">
+                  <widget class="QLineEdit" name="lfPercentageLineEdit">
+                   <property name="layoutDirection">
+                    <enum>Qt::RightToLeft</enum>
+                   </property>
+                   <property name="readOnly">
+                    <bool>true</bool>
+                   </property>
+                   <property name="placeholderText">
+                    <string>-</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="7" column="8" colspan="2">
+                  <widget class="QLineEdit" name="obstructiveApneasLineEdit">
+                   <property name="layoutDirection">
+                    <enum>Qt::RightToLeft</enum>
+                   </property>
+                   <property name="readOnly">
+                    <bool>true</bool>
+                   </property>
+                   <property name="placeholderText">
+                    <string>-</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="1" column="0">
+                  <spacer name="verticalSpacer_34">
+                   <property name="orientation">
+                    <enum>Qt::Vertical</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>20</width>
+                     <height>40</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item row="24" column="1" colspan="2">
+                  <widget class="QLabel" name="CSR">
+                   <property name="text">
+                    <string>Proporción de perisods CSR
+en el peridodo de análisis</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="20" column="0">
+                  <spacer name="verticalSpacer_10">
+                   <property name="orientation">
+                    <enum>Qt::Vertical</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>20</width>
+                     <height>40</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item row="31" column="0">
+                  <spacer name="verticalSpacer_46">
+                   <property name="orientation">
+                    <enum>Qt::Vertical</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>20</width>
+                     <height>40</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item row="20" column="3" colspan="2">
+                  <widget class="QLineEdit" name="minimumPulseRateLineEdit">
+                   <property name="layoutDirection">
+                    <enum>Qt::RightToLeft</enum>
+                   </property>
+                   <property name="readOnly">
+                    <bool>true</bool>
+                   </property>
+                   <property name="placeholderText">
+                    <string>-</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="26" column="1" colspan="4">
+                  <widget class="QLabel" name="label_22">
+                   <property name="text">
+                    <string>Parámetros de análisi utilizados (Predeterminado)</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="11" column="1" colspan="2">
+                  <widget class="QLabel" name="lfPercentage">
+                   <property name="text">
+                    <string>%Lim. Flujo Res sin Ron (lf)</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="8" column="0">
+                  <spacer name="verticalSpacer_27">
+                   <property name="orientation">
+                    <enum>Qt::Vertical</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>20</width>
+                     <height>40</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item row="3" column="0">
+                  <spacer name="verticalSpacer_32">
+                   <property name="orientation">
+                    <enum>Qt::Vertical</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>20</width>
+                     <height>40</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item row="12" column="3" colspan="2">
+                  <widget class="QLineEdit" name="lrPercentageLineEdit">
+                   <property name="layoutDirection">
+                    <enum>Qt::RightToLeft</enum>
+                   </property>
+                   <property name="readOnly">
+                    <bool>true</bool>
+                   </property>
+                   <property name="placeholderText">
+                    <string>-</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="16" column="8" colspan="2">
+                  <widget class="QLineEdit" name="saturation90MinLineEdit">
+                   <property name="layoutDirection">
+                    <enum>Qt::RightToLeft</enum>
+                   </property>
+                   <property name="readOnly">
+                    <bool>true</bool>
+                   </property>
+                   <property name="placeholderText">
+                    <string>-</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="10" column="6">
+                  <widget class="QLabel" name="hypoapneas">
+                   <property name="text">
+                    <string>Hypopnea:</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="5" column="0">
+                  <spacer name="verticalSpacer_30">
+                   <property name="orientation">
+                    <enum>Qt::Vertical</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>20</width>
+                     <height>40</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item row="12" column="8" colspan="2">
+                  <widget class="QLineEdit" name="lrLineEdit">
+                   <property name="layoutDirection">
+                    <enum>Qt::RightToLeft</enum>
+                   </property>
+                   <property name="readOnly">
+                    <bool>true</bool>
+                   </property>
+                   <property name="placeholderText">
+                    <string>-</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="4" column="8" colspan="2">
+                  <widget class="QLineEdit" name="respirationsLineEdit">
+                   <property name="layoutDirection">
+                    <enum>Qt::RightToLeft</enum>
+                   </property>
+                   <property name="readOnly">
+                    <bool>true</bool>
+                   </property>
+                   <property name="placeholderText">
+                    <string>-</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="24" column="0">
+                  <spacer name="verticalSpacer_14">
+                   <property name="orientation">
+                    <enum>Qt::Vertical</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>20</width>
+                     <height>40</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item row="15" column="8" colspan="2">
+                  <widget class="QLineEdit" name="desaturationsNumberLineEdit">
+                   <property name="layoutDirection">
+                    <enum>Qt::RightToLeft</enum>
+                   </property>
+                   <property name="readOnly">
+                    <bool>true</bool>
+                   </property>
+                   <property name="placeholderText">
+                    <string>-</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="12" column="6" colspan="2">
+                  <widget class="QLabel" name="lr">
+                   <property name="text">
+                    <string>Lim. flujo Res con Ron (LR):</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="15" column="0">
+                  <spacer name="verticalSpacer_20">
+                   <property name="orientation">
+                    <enum>Qt::Vertical</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>20</width>
+                     <height>40</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item row="8" column="8" colspan="2">
+                  <widget class="QLineEdit" name="centralApneasLineEdit">
+                   <property name="layoutDirection">
+                    <enum>Qt::RightToLeft</enum>
+                   </property>
+                   <property name="readOnly">
+                    <bool>true</bool>
+                   </property>
+                   <property name="placeholderText">
+                    <string>-</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="20" column="8" colspan="2">
+                  <widget class="QLineEdit" name="saturation80MinLineEdit">
+                   <property name="layoutDirection">
+                    <enum>Qt::RightToLeft</enum>
+                   </property>
+                   <property name="readOnly">
+                    <bool>true</bool>
+                   </property>
+                   <property name="placeholderText">
+                    <string>-</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="0" column="8">
+                  <spacer name="horizontalSpacer_29">
+                   <property name="orientation">
+                    <enum>Qt::Horizontal</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>40</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item row="17" column="1" colspan="2">
+                  <widget class="QLabel" name="lowestSaturation">
+                   <property name="text">
+                    <string>Saturación más baja:</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="34" column="5">
+                  <spacer name="horizontalSpacer_42">
+                   <property name="orientation">
+                    <enum>Qt::Horizontal</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>40</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item row="34" column="3">
+                  <spacer name="horizontalSpacer_40">
+                   <property name="orientation">
+                    <enum>Qt::Horizontal</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>40</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item row="14" column="0">
+                  <spacer name="verticalSpacer_21">
+                   <property name="orientation">
+                    <enum>Qt::Vertical</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>20</width>
+                     <height>40</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item row="10" column="0">
+                  <spacer name="verticalSpacer_25">
+                   <property name="orientation">
+                    <enum>Qt::Vertical</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>20</width>
+                     <height>40</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item row="25" column="10">
+                  <spacer name="verticalSpacer_38">
+                   <property name="orientation">
+                    <enum>Qt::Vertical</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>20</width>
+                     <height>40</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item row="11" column="6" colspan="2">
+                  <widget class="QLabel" name="lf">
+                   <property name="text">
+                    <string>Lim. Flujo Res sin Ron (Lf):</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="11" column="8" colspan="2">
+                  <widget class="QLineEdit" name="lfLineEdit">
+                   <property name="layoutDirection">
+                    <enum>Qt::RightToLeft</enum>
+                   </property>
+                   <property name="readOnly">
+                    <bool>true</bool>
+                   </property>
+                   <property name="placeholderText">
+                    <string>-</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="3" column="6" colspan="2">
+                  <widget class="QLabel" name="rpm">
+                   <property name="text">
+                    <string>Breaths per minute:</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="12" column="0">
+                  <spacer name="verticalSpacer_23">
+                   <property name="orientation">
+                    <enum>Qt::Vertical</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>20</width>
+                     <height>40</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item row="19" column="0">
+                  <spacer name="verticalSpacer_16">
+                   <property name="orientation">
+                    <enum>Qt::Vertical</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>20</width>
+                     <height>40</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item row="13" column="0">
+                  <spacer name="verticalSpacer_22">
+                   <property name="orientation">
+                    <enum>Qt::Vertical</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>20</width>
+                     <height>40</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item row="0" column="10">
+                  <spacer name="horizontalSpacer_2">
+                   <property name="orientation">
+                    <enum>Qt::Horizontal</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>40</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item row="29" column="0">
+                  <spacer name="verticalSpacer_44">
+                   <property name="orientation">
+                    <enum>Qt::Vertical</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>20</width>
+                     <height>40</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item row="30" column="1" rowspan="4" colspan="9">
+                  <widget class="QTextEdit" name="commentsTextEdit">
+                   <property name="layoutDirection">
+                    <enum>Qt::LeftToRight</enum>
+                   </property>
+                   <property name="readOnly">
+                    <bool>true</bool>
+                   </property>
+                   <property name="placeholderText">
+                    <string>-</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="15" column="10">
+                  <spacer name="verticalSpacer_37">
+                   <property name="orientation">
+                    <enum>Qt::Vertical</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>20</width>
+                     <height>40</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item row="8" column="6" colspan="2">
+                  <widget class="QLabel" name="centralApneas">
+                   <property name="text">
+                    <string>Central apneas:</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="22" column="3" colspan="2">
+                  <widget class="QLineEdit" name="averagePulseRateLineEdit">
+                   <property name="layoutDirection">
+                    <enum>Qt::RightToLeft</enum>
+                   </property>
+                   <property name="readOnly">
+                    <bool>true</bool>
+                   </property>
+                   <property name="placeholderText">
+                    <string>-</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="32" column="0">
+                  <spacer name="verticalSpacer_47">
+                   <property name="orientation">
+                    <enum>Qt::Vertical</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>20</width>
+                     <height>40</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item row="28" column="7">
+                  <widget class="QLabel" name="defaultCSR">
+                   <property name="text">
+                    <string>CSR:</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="0" column="1">
+                  <spacer name="horizontalSpacer_36">
+                   <property name="orientation">
+                    <enum>Qt::Horizontal</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>40</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item row="9" column="3" colspan="2">
+                  <widget class="QLineEdit" name="IAMLineEdit">
+                   <property name="layoutDirection">
+                    <enum>Qt::RightToLeft</enum>
+                   </property>
+                   <property name="readOnly">
+                    <bool>true</bool>
+                   </property>
+                   <property name="placeholderText">
+                    <string>-</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="17" column="3" colspan="2">
+                  <widget class="QLineEdit" name="lowestSaturationLineEdit">
+                   <property name="layoutDirection">
+                    <enum>Qt::RightToLeft</enum>
+                   </property>
+                   <property name="readOnly">
+                    <bool>true</bool>
+                   </property>
+                   <property name="placeholderText">
+                    <string>-</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="21" column="8" colspan="2">
+                  <widget class="QLineEdit" name="saturation80PerLineEdit">
+                   <property name="readOnly">
+                    <bool>true</bool>
+                   </property>
+                   <property name="placeholderText">
+                    <string>-</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="14" column="3" colspan="2">
+                  <widget class="QLineEdit" name="IDOLineEdit">
+                   <property name="layoutDirection">
+                    <enum>Qt::RightToLeft</enum>
+                   </property>
+                   <property name="readOnly">
+                    <bool>true</bool>
+                   </property>
+                   <property name="placeholderText">
+                    <string>-</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="8" column="10">
+                  <spacer name="verticalSpacer_36">
+                   <property name="orientation">
+                    <enum>Qt::Vertical</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>20</width>
+                     <height>40</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item row="18" column="1" colspan="2">
+                  <widget class="QLabel" name="basalSaturation">
+                   <property name="text">
+                    <string>Saturación basal:</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="28" column="0">
+                  <spacer name="verticalSpacer_43">
+                   <property name="orientation">
+                    <enum>Qt::Vertical</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>20</width>
+                     <height>40</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item row="20" column="1" colspan="2">
+                  <widget class="QLabel" name="minimumPulseRate">
+                   <property name="text">
+                    <string>Frecuencia de pulso mínima:</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="19" column="8" colspan="2">
+                  <widget class="QLineEdit" name="saturation85PerLineEdit">
+                   <property name="placeholderText">
+                    <string>-</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="0" column="4">
+                  <spacer name="horizontalSpacer_33">
+                   <property name="orientation">
+                    <enum>Qt::Horizontal</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>40</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item row="4" column="3" colspan="2">
+                  <widget class="QLineEdit" name="IRLineEdit">
+                   <property name="layoutDirection">
+                    <enum>Qt::RightToLeft</enum>
+                   </property>
+                   <property name="readOnly">
+                    <bool>true</bool>
+                   </property>
+                   <property name="placeholderText">
+                    <string>-</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="28" column="8" colspan="2">
+                  <widget class="QLineEdit" name="defaultCSRLineEdit">
+                   <property name="layoutDirection">
+                    <enum>Qt::LeftToRight</enum>
+                   </property>
+                   <property name="readOnly">
+                    <bool>true</bool>
+                   </property>
+                   <property name="placeholderText">
+                    <string>-</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="6" column="1">
+                  <widget class="QLabel" name="IAI">
+                   <property name="text">
+                    <string>ÍAI:</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="27" column="2" colspan="3">
+                  <widget class="QLineEdit" name="defaultApneaLineEdit">
+                   <property name="layoutDirection">
+                    <enum>Qt::LeftToRight</enum>
+                   </property>
+                   <property name="readOnly">
+                    <bool>true</bool>
+                   </property>
+                   <property name="placeholderText">
+                    <string>-</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="23" column="0">
+                  <spacer name="verticalSpacer_13">
+                   <property name="orientation">
+                    <enum>Qt::Vertical</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>20</width>
+                     <height>40</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item row="3" column="8" colspan="2">
+                  <widget class="QLineEdit" name="rpmLineEdit">
+                   <property name="layoutDirection">
+                    <enum>Qt::RightToLeft</enum>
+                   </property>
+                   <property name="readOnly">
+                    <bool>true</bool>
+                   </property>
+                   <property name="placeholderText">
+                    <string>-</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="28" column="2" colspan="2">
+                  <widget class="QLineEdit" name="defaultSnoringLineEdit">
+                   <property name="layoutDirection">
+                    <enum>Qt::LeftToRight</enum>
+                   </property>
+                   <property name="readOnly">
+                    <bool>true</bool>
+                   </property>
+                   <property name="placeholderText">
+                    <string>-</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="34" column="1">
+                  <spacer name="horizontalSpacer_38">
+                   <property name="orientation">
+                    <enum>Qt::Horizontal</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>40</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item row="34" column="7">
+                  <spacer name="horizontalSpacer_44">
+                   <property name="orientation">
+                    <enum>Qt::Horizontal</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>40</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item row="18" column="8" colspan="2">
+                  <widget class="QLineEdit" name="saturation85MinLineEdit">
+                   <property name="layoutDirection">
+                    <enum>Qt::RightToLeft</enum>
+                   </property>
+                   <property name="readOnly">
+                    <bool>true</bool>
+                   </property>
+                   <property name="placeholderText">
+                    <string>-</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="28" column="5" colspan="2">
+                  <widget class="QLineEdit" name="defaultDesaturationLineEdit">
+                   <property name="layoutDirection">
+                    <enum>Qt::LeftToRight</enum>
+                   </property>
+                   <property name="readOnly">
+                    <bool>true</bool>
+                   </property>
+                   <property name="placeholderText">
+                    <string>-</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="10" column="3" colspan="2">
+                  <widget class="QLineEdit" name="hypopneaIndexLineEdit">
+                   <property name="layoutDirection">
+                    <enum>Qt::RightToLeft</enum>
+                   </property>
+                   <property name="readOnly">
+                    <bool>true</bool>
+                   </property>
+                   <property name="placeholderText">
+                    <string>-</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="28" column="1">
+                  <widget class="QLabel" name="defaultSnoring">
+                   <property name="text">
+                    <string>Ronquido:</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="21" column="1" colspan="2">
+                  <widget class="QLabel" name="maximumPulseRate">
+                   <property name="text">
+                    <string>Frecuencia de pulso máxima:</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="0" column="7">
+                  <spacer name="horizontalSpacer_30">
+                   <property name="orientation">
+                    <enum>Qt::Horizontal</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>40</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item row="1" column="10">
+                  <spacer name="verticalSpacer_35">
+                   <property name="orientation">
+                    <enum>Qt::Vertical</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>20</width>
+                     <height>40</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item row="15" column="3" colspan="2">
+                  <widget class="QLineEdit" name="averageSaturationLineEdit">
+                   <property name="layoutDirection">
+                    <enum>Qt::RightToLeft</enum>
+                   </property>
+                   <property name="readOnly">
+                    <bool>true</bool>
+                   </property>
+                   <property name="placeholderText">
+                    <string>-</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+        <item row="1" column="12" rowspan="8">
+         <spacer name="verticalSpacer_2">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="3" column="1" colspan="2">
+         <widget class="QPushButton" name="loadReportPushButton">
+          <property name="text">
+           <string>Load PDF</string>
+          </property>
+         </widget>
+        </item>
+        <item row="10" column="12">
+         <spacer name="horizontalSpacer_15">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="10" column="5">
+         <spacer name="horizontalSpacer_23">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="10" column="3">
+         <spacer name="horizontalSpacer_26">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="10" column="6">
+         <spacer name="horizontalSpacer_22">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="7" column="0">
+         <spacer name="verticalSpacer_4">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="4" column="0">
+         <spacer name="verticalSpacer_7">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="0" column="0">
+         <spacer name="horizontalSpacer_14">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="0" column="2">
+         <spacer name="horizontalSpacer_12">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="10" column="2">
+         <spacer name="horizontalSpacer_25">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="10" column="10">
+         <spacer name="horizontalSpacer_18">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="0" column="6">
+         <spacer name="horizontalSpacer_8">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="0" column="10">
+         <spacer name="horizontalSpacer_4">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="2" column="1" colspan="2">
+         <widget class="QPushButton" name="loadEDFFilePushButton">
+          <property name="text">
+           <string>Load OSA File</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="7">
+         <spacer name="horizontalSpacer_7">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="6" column="0">
+         <spacer name="verticalSpacer_5">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="2" column="0">
+         <spacer name="verticalSpacer_9">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="0" column="11">
+         <spacer name="horizontalSpacer_3">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="0" column="8">
+         <spacer name="horizontalSpacer_6">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="10" column="7">
+         <spacer name="horizontalSpacer_21">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="10" column="11">
+         <spacer name="horizontalSpacer_17">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="0" column="3">
+         <spacer name="horizontalSpacer_11">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="1" column="3" colspan="7">
+         <widget class="QFrame" name="titleFrame">
+          <property name="styleSheet">
+           <string notr="true">QFrame {
+	border-width: 4px;
+	border-style: solid;
+	border-color: rgb(21, 178, 226);
+	border-radius: 17px;
+}</string>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_3">
+           <item alignment="Qt::AlignHCenter">
+            <widget class="QLabel" name="titleLabel">
+             <property name="styleSheet">
+              <string notr="true">border: none;
+font-size: 30px;</string>
+             </property>
+             <property name="text">
+              <string>Polygraphy Result</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item row="2" column="3" colspan="3">
+         <widget class="QPushButton" name="editEDFFilepushButton">
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(255,0,0);</string>
+          </property>
+          <property name="text">
+           <string>No OSA File</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <tabstops>
+  <tabstop>scrollArea</tabstop>
+  <tabstop>IAHLineEdit</tabstop>
+  <tabstop>IRLineEdit</tabstop>
+  <tabstop>apneasIndexLineEdit</tabstop>
+  <tabstop>IAILineEdit</tabstop>
+  <tabstop>IAOLineEdit</tabstop>
+  <tabstop>IACLineEdit</tabstop>
+  <tabstop>IAMLineEdit</tabstop>
+  <tabstop>hypopneaIndexLineEdit</tabstop>
+  <tabstop>lfPercentageLineEdit</tabstop>
+  <tabstop>lrPercentageLineEdit</tabstop>
+  <tabstop>rpmLineEdit</tabstop>
+  <tabstop>respirationsLineEdit</tabstop>
+  <tabstop>apneasLineEdit</tabstop>
+  <tabstop>indeterminatedApneasLineEdit</tabstop>
+  <tabstop>obstructiveApneasLineEdit</tabstop>
+  <tabstop>centralApneasLineEdit</tabstop>
+  <tabstop>mixedApneasLineEdit</tabstop>
+  <tabstop>hypoapneasLineEdit</tabstop>
+  <tabstop>lfLineEdit</tabstop>
+  <tabstop>lrLineEdit</tabstop>
+  <tabstop>snoringEventsLineEdit</tabstop>
+  <tabstop>IDOLineEdit</tabstop>
+  <tabstop>averageSaturationLineEdit</tabstop>
+  <tabstop>minorDesaturationLineEdit</tabstop>
+  <tabstop>lowestSaturationLineEdit</tabstop>
+  <tabstop>basalSaturationLineEdit</tabstop>
+  <tabstop>minimumPulseRateLineEdit</tabstop>
+  <tabstop>maximumPulseRateLineEdit</tabstop>
+  <tabstop>averagePulseRateLineEdit</tabstop>
+  <tabstop>desaturationsNumberLineEdit</tabstop>
+  <tabstop>saturation90MinLineEdit</tabstop>
+  <tabstop>saturation90PerLineEdit</tabstop>
+  <tabstop>saturation85MinLineEdit</tabstop>
+  <tabstop>saturation85PerLineEdit</tabstop>
+  <tabstop>saturation80MinLineEdit</tabstop>
+  <tabstop>saturation80PerLineEdit</tabstop>
+  <tabstop>CSRLineEdit</tabstop>
+  <tabstop>defaultApneaLineEdit</tabstop>
+  <tabstop>defaultHypopneaLineEdit</tabstop>
+  <tabstop>defaultSnoringLineEdit</tabstop>
+  <tabstop>defaultDesaturationLineEdit</tabstop>
+  <tabstop>defaultCSRLineEdit</tabstop>
+  <tabstop>commentsTextEdit</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>

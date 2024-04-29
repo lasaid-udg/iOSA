@@ -1,0 +1,26 @@
+{
+  "type": "Compass Connections",
+  "version": {
+    "$numberInt": "1"
+  },
+  "connections": [
+    {
+      "id": "d60ebac2-0645-4505-b870-a53cf4523ce1",
+      "connectionOptions": {
+        "connectionString": "mongodb://localhost:27017/",
+        "oidc": {
+          "serializedState": "eyJvaWRjUGx1Z2luU3RhdGVWZXJzaW9uIjowLCJzdGF0ZSI6W119"
+        }
+      },
+      "favorite": {
+        "name": "inSAsy",
+        "color": "color4"
+      },
+      "lastUsed": {
+        "$date": {
+          "$numberLong": "1694553966659"
+        }
+      }
+    }
+  ]
+}

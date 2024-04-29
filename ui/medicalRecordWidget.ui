@@ -1,0 +1,3912 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1169</width>
+    <height>695</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1000</width>
+    <height>600</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>inSAsy - Registro Médico</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget {
+	font: 57 10pt Manrope medium;
+	background-color: rgb(255, 255, 255);
+}
+
+QFrame {
+	border-radius: none;
+}
+
+QScrollBar:vertical {
+	border: none;
+	background-color: rgb(205, 205, 205);
+	width: 14px;
+	margin: 15px 0 15px 0;
+	border-radius: 0x;
+}
+
+QScrollBar::handle:vertical {
+	background-color: rgb(205, 205, 205);
+	border-radius: 7px;
+}
+
+QScrollBar::handle:vertical:hover {
+	background-color: rgb(7, 119, 156)
+}
+
+QScrollBar::handle:vertical:pressed {
+	background-color: rgb(9, 139, 182);
+}
+
+/* TOP BUTTON*/
+
+QScrollBar::sub-line:vertical {
+	border: none;
+	background-color: rgb(7, 119, 156);
+	height: 15px;
+	border-top-left-radius: 7px;
+	border-top-right-radius: 7px;
+	subcontrol-position: top;
+	subcontrol-origin: margin;
+}
+
+QScrollBar::sub-line:vertical:hover {
+	background-color: rgb(205, 205, 205);
+}
+
+QScrollBar::sub-line:vertical:pressed {
+	background-color: rgb(11, 170, 223);
+}
+
+/*BOTTOM BUTTON*/
+
+QScrollBar::add-line:vertical {
+	border: none;
+	background-color: rgb(7, 119, 156);
+	height: 15px;
+	border-bottom-left-radius: 7px;
+	border-bottom-right-radius: 7px;
+	subcontrol-position: bottom;
+	subcontrol-origin: margin;
+}
+
+QScrollBar::add-line:vertical:hover {
+	background-color: rgb(205, 205, 205);
+}
+
+QScrollBar::add-line:vertical:pressed {
+	background-color: rgb(11, 170, 223);
+}
+
+/*RESET ARROWS*/
+
+QScrollBar::up-arrow:vertical, QScrollBar::down-arrow:vertical {
+	background-color: none;
+}
+
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
+	background-color: none;
+}
+</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <layout class="QGridLayout" name="gridLayout_13">
+     <item row="0" column="0">
+      <widget class="QScrollArea" name="scrollArea">
+       <property name="styleSheet">
+        <string notr="true">QScrollBar:vertical {
+	background-color: rgb(255, 255, 255);
+}</string>
+       </property>
+       <property name="widgetResizable">
+        <bool>true</bool>
+       </property>
+       <widget class="QWidget" name="scrollAreaWidgetContents">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>1135</width>
+          <height>3718</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_23">
+         <item>
+          <widget class="QFrame" name="mainFrame">
+           <property name="minimumSize">
+            <size>
+             <width>1000</width>
+             <height>3700</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QFrame#mainFrame {
+	background-color: rgb(255, 255, 255);
+	border: none;
+}
+
+/*----------*/
+
+QLineEdit {
+	background-color: rgb(255, 255, 255);
+	border-width: 2px;
+	border-style: solid;
+	border-color: none;
+	border-bottom-color: rgb(192, 192, 192);
+	border-radius: 15px;
+}
+QLineEdit:hover {
+	border-bottom-color: rgb(140, 140, 140);
+}
+
+QFrame {
+	background-color: rgb(255, 255, 255);
+	border-width: 3px;
+	border-style: solid;
+	border-color: rgb(13, 182, 243);
+	border-radius: 18px;
+}
+QLabel {
+	background-color: none;
+	border-color: none;
+	font-size: 16px;
+}
+
+QSpinBox, QDoubleSpinBox {
+    padding-right: 20px;
+    border-width: 2px;
+	border-style: solid;
+	border-color: rgb(192, 192, 192);
+}
+
+QSpinBox:hover {
+	border-color: rgb(140, 140, 140);
+}
+
+QDoubleSpinBox:hover {
+	border-color: rgb(140, 140, 140);
+}
+
+QCheckBox::indicator {
+    width: 13px;
+    height: 13px;
+}
+
+QComboBox {
+	background-color: rgb(255, 255, 255);
+	border-width: 2px;
+	border-style: solid;
+	border-color: rgb(192, 192, 192);
+}
+
+QComboBox:hover {
+	border-color: rgb(140, 140, 140);
+}
+
+QComboBox::down-arrow:on { /* shift the arrow when popup is open */
+    top: 1px;
+    left: 1px;
+}
+
+QPushButton {
+	padding: 5px;
+	border-width: 2px;
+	border-style: solid;
+	border-color: rgb(11, 173, 226);
+	background-color: rgb(13, 195, 255);
+	border-radius: 12px;
+}
+
+QPushButton:hover {
+	background-color: rgb(11, 173, 226);
+}
+
+QPushButton:pressed {
+	border-color: (9, 146, 191);
+	background-color:rgb(9, 146, 191);
+}</string>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_42">
+            <item>
+             <layout class="QGridLayout" name="RegistryGridLayout">
+              <property name="leftMargin">
+               <number>0</number>
+              </property>
+              <property name="topMargin">
+               <number>0</number>
+              </property>
+              <property name="rightMargin">
+               <number>0</number>
+              </property>
+              <property name="bottomMargin">
+               <number>0</number>
+              </property>
+              <item row="15" column="3">
+               <spacer name="verticalSpacer_30">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>20</width>
+                  <height>40</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item row="8" column="2" colspan="9">
+               <spacer name="horizontalSpacer_138">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item row="22" column="3">
+               <spacer name="verticalSpacer_40">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>20</width>
+                  <height>40</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item row="0" column="9">
+               <spacer name="horizontalSpacer_112">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item row="44" column="7" rowspan="4" colspan="3">
+               <widget class="QFrame" name="spirometryFrame">
+                <property name="styleSheet">
+                 <string notr="true">QFrame {
+	border-width: 2px;
+}
+
+QLabel {
+	border-color: none;
+}</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_65">
+                 <item>
+                  <layout class="QGridLayout" name="gridLayout_51">
+                   <item row="0" column="0">
+                    <spacer name="horizontalSpacer_118">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>40</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                   <item row="0" column="1">
+                    <spacer name="horizontalSpacer_120">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>40</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                   <item row="2" column="0">
+                    <widget class="QLabel" name="FVCLabel">
+                     <property name="text">
+                      <string>FVC%</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="1" column="1">
+                    <widget class="QDoubleSpinBox" name="FVClitrosDoubleSpinBox">
+                     <property name="enabled">
+                      <bool>false</bool>
+                     </property>
+                     <property name="maximum">
+                      <double>140.000000000000000</double>
+                     </property>
+                     <property name="singleStep">
+                      <double>0.010000000000000</double>
+                     </property>
+                     <property name="value">
+                      <double>0.000000000000000</double>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="5" column="1">
+                    <widget class="QLineEdit" name="FEV1LFVCLitrosLineEdit">
+                     <property name="readOnly">
+                      <bool>true</bool>
+                     </property>
+                     <property name="placeholderText">
+                      <string>FEV1L / FVCL</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="6" column="0" colspan="2">
+                    <spacer name="horizontalSpacer_119">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>40</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                   <item row="1" column="0">
+                    <widget class="QLabel" name="FVClitrosLabel">
+                     <property name="text">
+                      <string>FVC Litros</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="2" column="1">
+                    <widget class="QSpinBox" name="FVCSpinBox">
+                     <property name="enabled">
+                      <bool>false</bool>
+                     </property>
+                     <property name="maximum">
+                      <number>140</number>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="5" column="0">
+                    <widget class="QLabel" name="label">
+                     <property name="text">
+                      <string>FEV1L / FVCL</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="4" column="1">
+                    <widget class="QSpinBox" name="FEV1LSpinBox">
+                     <property name="enabled">
+                      <bool>false</bool>
+                     </property>
+                     <property name="maximum">
+                      <number>140</number>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="3" column="0">
+                    <widget class="QLabel" name="FEV1litrosLabel">
+                     <property name="text">
+                      <string>FEV1 Litros</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="4" column="0">
+                    <widget class="QLabel" name="FEV1Llabel">
+                     <property name="text">
+                      <string>FEV1L%</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="3" column="1">
+                    <widget class="QDoubleSpinBox" name="FEV1litrosDoubleSpinBox">
+                     <property name="enabled">
+                      <bool>false</bool>
+                     </property>
+                     <property name="maximum">
+                      <double>140.000000000000000</double>
+                     </property>
+                     <property name="singleStep">
+                      <double>0.010000000000000</double>
+                     </property>
+                     <property name="value">
+                      <double>0.000000000000000</double>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item row="13" column="4" rowspan="3" colspan="5">
+               <widget class="QFrame" name="vitalSignsFrame">
+                <property name="styleSheet">
+                 <string notr="true">QFrame {
+	border-width: 2px;
+}
+
+QLabel {
+	border-color: none;
+}</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_61">
+                 <item>
+                  <layout class="QGridLayout" name="gridLayout_49">
+                   <item row="1" column="1">
+                    <widget class="QSpinBox" name="heartRateSpinBox">
+                     <property name="minimum">
+                      <number>40</number>
+                     </property>
+                     <property name="maximum">
+                      <number>300</number>
+                     </property>
+                     <property name="value">
+                      <number>70</number>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="4" column="0" colspan="6">
+                    <spacer name="horizontalSpacer_104">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>40</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                   <item row="2" column="1">
+                    <widget class="QSpinBox" name="respiratoryFrequencySpinBox">
+                     <property name="maximum">
+                      <number>200</number>
+                     </property>
+                     <property name="value">
+                      <number>20</number>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="5">
+                    <spacer name="horizontalSpacer_105">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>40</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                   <item row="0" column="2">
+                    <spacer name="horizontalSpacer_106">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>40</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                   <item row="2" column="5">
+                    <widget class="QSpinBox" name="diastolic_blood_pressure_spin_box">
+                     <property name="maximum">
+                      <number>240</number>
+                     </property>
+                     <property name="value">
+                      <number>80</number>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="1" column="0">
+                    <widget class="QLabel" name="cardiacFrequencyLabel">
+                     <property name="text">
+                      <string>Frecuencia Cardiaca</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="1" column="5">
+                    <widget class="QSpinBox" name="systolic_blood_pressure_spin_box">
+                     <property name="maximum">
+                      <number>360</number>
+                     </property>
+                     <property name="value">
+                      <number>120</number>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="3" column="0">
+                    <widget class="QLabel" name="oxigenSaturationLabel">
+                     <property name="text">
+                      <string>Saturación de Oxigeno</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="4">
+                    <spacer name="horizontalSpacer_107">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>40</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                   <item row="3" column="4">
+                    <widget class="QLabel" name="temperatureLabel">
+                     <property name="text">
+                      <string>Temperatura</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="0">
+                    <spacer name="horizontalSpacer_108">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>40</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                   <item row="2" column="0">
+                    <widget class="QLabel" name="respiratoryFrequencyLabel">
+                     <property name="text">
+                      <string>Frecuencia Respiratoria</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="3">
+                    <spacer name="horizontalSpacer_109">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>40</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                   <item row="1" column="4" rowspan="2">
+                    <widget class="QLabel" name="arterialTensionLabel">
+                     <property name="text">
+                      <string>Presión Arterial</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="1">
+                    <spacer name="horizontalSpacer_110">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>40</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                   <item row="3" column="1">
+                    <widget class="QSpinBox" name="oxigenSaturationSpinBox">
+                     <property name="minimum">
+                      <number>20</number>
+                     </property>
+                     <property name="maximum">
+                      <number>100</number>
+                     </property>
+                     <property name="value">
+                      <number>95</number>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="3" column="5">
+                    <widget class="QDoubleSpinBox" name="temperatureDoubleSpinBox">
+                     <property name="decimals">
+                      <number>1</number>
+                     </property>
+                     <property name="minimum">
+                      <double>20.000000000000000</double>
+                     </property>
+                     <property name="maximum">
+                      <double>43.000000000000000</double>
+                     </property>
+                     <property name="singleStep">
+                      <double>0.100000000000000</double>
+                     </property>
+                     <property name="value">
+                      <double>36.500000000000000</double>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item row="6" column="2">
+               <spacer name="verticalSpacer_33">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>20</width>
+                  <height>40</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item row="6" column="3" rowspan="2" colspan="7">
+               <widget class="QFrame" name="weightHeightIMCFrame">
+                <property name="styleSheet">
+                 <string notr="true">QFrame {
+	border-width: 2px;
+}
+
+QLabel {
+	border-color: none;
+}</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_76">
+                 <item>
+                  <layout class="QGridLayout" name="gridLayout_60">
+                   <item row="0" column="7">
+                    <widget class="QLabel" name="BMILabel">
+                     <property name="text">
+                      <string>IMC</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="8">
+                    <widget class="QLineEdit" name="BMILineEdit">
+                     <property name="whatsThis">
+                      <string>Índice de Masa Corporal del paciente</string>
+                     </property>
+                     <property name="readOnly">
+                      <bool>true</bool>
+                     </property>
+                     <property name="placeholderText">
+                      <string>0.0000</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="4">
+                    <widget class="QLabel" name="neckCircumferenceLabel">
+                     <property name="text">
+                      <string>Circuenferancia
+Del Cuello (CM)</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="6">
+                    <spacer name="horizontalSpacer_134">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>40</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                   <item row="0" column="3">
+                    <widget class="QLineEdit" name="heightLineEdit">
+                     <property name="whatsThis">
+                      <string>Estatura del paciente en metros</string>
+                     </property>
+                     <property name="maxLength">
+                      <number>4</number>
+                     </property>
+                     <property name="placeholderText">
+                      <string>1.85, 1.6, etc</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="1">
+                    <widget class="QLineEdit" name="weightLineEdit">
+                     <property name="whatsThis">
+                      <string>Peso del paciente en kilogramos</string>
+                     </property>
+                     <property name="maxLength">
+                      <number>6</number>
+                     </property>
+                     <property name="placeholderText">
+                      <string>85.14, 54.9, etc</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="2">
+                    <widget class="QLabel" name="heightLabel">
+                     <property name="text">
+                      <string>Estatura (M)</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="0">
+                    <widget class="QLabel" name="weightLabel">
+                     <property name="text">
+                      <string>Peso (KG)</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="5">
+                    <widget class="QLineEdit" name="neckCircumferenceLineEdit">
+                     <property name="whatsThis">
+                      <string>Circunferencia del cuello en centimetros</string>
+                     </property>
+                     <property name="maxLength">
+                      <number>5</number>
+                     </property>
+                     <property name="placeholderText">
+                      <string>22.34, 17.6, etc</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item row="48" column="2">
+               <spacer name="horizontalSpacer_79">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item row="36" column="2" colspan="9">
+               <spacer name="horizontalSpacer_124">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item row="39" column="1">
+               <spacer name="verticalSpacer_51">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>20</width>
+                  <height>40</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item row="24" column="3">
+               <spacer name="verticalSpacer_2">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>20</width>
+                  <height>40</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item row="47" column="2">
+               <spacer name="verticalSpacer_42">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>20</width>
+                  <height>40</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item row="23" column="3">
+               <spacer name="verticalSpacer">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>20</width>
+                  <height>40</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item row="0" column="10">
+               <spacer name="horizontalSpacer_101">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item row="21" column="3">
+               <spacer name="verticalSpacer_45">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>20</width>
+                  <height>40</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item row="44" column="3" rowspan="4" colspan="3">
+               <widget class="QFrame" name="bloodGasesFrame">
+                <property name="styleSheet">
+                 <string notr="true">QFrame {
+	border-width: 2px;
+}
+
+QLabel {
+	border-color: none;
+}</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_63">
+                 <item>
+                  <layout class="QGridLayout" name="gridLayout_50">
+                   <item row="4" column="1">
+                    <widget class="QDoubleSpinBox" name="EBDoubleSpinBox">
+                     <property name="enabled">
+                      <bool>false</bool>
+                     </property>
+                     <property name="decimals">
+                      <number>1</number>
+                     </property>
+                     <property name="minimum">
+                      <double>-10.000000000000000</double>
+                     </property>
+                     <property name="maximum">
+                      <double>10.000000000000000</double>
+                     </property>
+                     <property name="singleStep">
+                      <double>0.100000000000000</double>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="1" column="0">
+                    <widget class="QLabel" name="PHLabel">
+                     <property name="text">
+                      <string>P.H.</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="2" column="0">
+                    <widget class="QLabel" name="pCO2Label">
+                     <property name="text">
+                      <string>pCO2</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="4" column="0">
+                    <widget class="QLabel" name="EBLabel">
+                     <property name="text">
+                      <string>EB</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="2" column="1">
+                    <widget class="QSpinBox" name="pCO2SpinBox">
+                     <property name="enabled">
+                      <bool>false</bool>
+                     </property>
+                     <property name="maximum">
+                      <number>130</number>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="3" column="1">
+                    <widget class="QSpinBox" name="pO2SpinBox">
+                     <property name="enabled">
+                      <bool>false</bool>
+                     </property>
+                     <property name="maximum">
+                      <number>120</number>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="3" column="0">
+                    <widget class="QLabel" name="pO2Label">
+                     <property name="text">
+                      <string>pO2</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="1" column="1">
+                    <widget class="QDoubleSpinBox" name="PHDoubleSpinBox">
+                     <property name="enabled">
+                      <bool>false</bool>
+                     </property>
+                     <property name="decimals">
+                      <number>2</number>
+                     </property>
+                     <property name="minimum">
+                      <double>0.000000000000000</double>
+                     </property>
+                     <property name="maximum">
+                      <double>8.000000000000000</double>
+                     </property>
+                     <property name="singleStep">
+                      <double>0.010000000000000</double>
+                     </property>
+                     <property name="value">
+                      <double>0.000000000000000</double>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="5" column="0" colspan="2">
+                    <spacer name="horizontalSpacer_113">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>40</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                   <item row="0" column="1">
+                    <spacer name="horizontalSpacer_114">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>40</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                   <item row="0" column="0">
+                    <spacer name="horizontalSpacer_115">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>40</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                  </layout>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item row="41" column="2" colspan="9">
+               <spacer name="horizontalSpacer_83">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item row="27" column="2" colspan="9">
+               <spacer name="horizontalSpacer_123">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item row="35" column="3">
+               <spacer name="verticalSpacer_54">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>20</width>
+                  <height>40</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item row="28" column="3">
+               <spacer name="verticalSpacer_41">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>20</width>
+                  <height>40</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item row="45" column="2">
+               <spacer name="verticalSpacer_52">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>20</width>
+                  <height>40</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item row="30" column="3">
+               <spacer name="verticalSpacer_43">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>20</width>
+                  <height>40</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item row="12" column="2" colspan="9">
+               <spacer name="horizontalSpacer_135">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item row="0" column="2">
+               <spacer name="horizontalSpacer_132">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item row="18" column="2" colspan="9">
+               <spacer name="horizontalSpacer_141">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item row="39" column="2" rowspan="2" colspan="9">
+               <widget class="QFrame" name="diagnosticAssistantsFrame">
+                <property name="styleSheet">
+                 <string notr="true">QFrame {
+	border-width: 2px;
+}
+
+QLabel {
+	border-color: none;
+}</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_60">
+                 <item>
+                  <layout class="QGridLayout" name="gridLayout_48">
+                   <item row="0" column="6">
+                    <spacer name="horizontalSpacer_92">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>40</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                   <item row="0" column="2">
+                    <spacer name="horizontalSpacer_93">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>40</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                   <item row="0" column="5">
+                    <spacer name="horizontalSpacer_94">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>40</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                   <item row="0" column="1">
+                    <spacer name="horizontalSpacer_95">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>40</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                   <item row="0" column="3">
+                    <spacer name="horizontalSpacer_96">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>40</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                   <item row="2" column="0" colspan="8">
+                    <spacer name="horizontalSpacer_97">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>40</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                   <item row="0" column="0">
+                    <spacer name="horizontalSpacer_98">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>40</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                   <item row="0" column="4">
+                    <spacer name="horizontalSpacer_99">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>40</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                   <item row="0" column="7">
+                    <spacer name="horizontalSpacer_100">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>40</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                   <item row="1" column="0">
+                    <widget class="QLabel" name="scaleEpworthLabel">
+                     <property name="text">
+                      <string>Escala Epworth</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="1" column="1">
+                    <widget class="QSpinBox" name="scaleEpworthSpinBox">
+                     <property name="enabled">
+                      <bool>false</bool>
+                     </property>
+                     <property name="maximum">
+                      <number>24</number>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="1" column="3">
+                    <widget class="QLabel" name="ETco2Label">
+                     <property name="text">
+                      <string>ETco2</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="1" column="4">
+                    <widget class="QSpinBox" name="ETco2SpinBox">
+                     <property name="enabled">
+                      <bool>false</bool>
+                     </property>
+                     <property name="maximum">
+                      <number>100</number>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="1" column="7">
+                    <widget class="QSpinBox" name="scaleMallampatiSpinBox">
+                     <property name="enabled">
+                      <bool>false</bool>
+                     </property>
+                     <property name="minimum">
+                      <number>0</number>
+                     </property>
+                     <property name="maximum">
+                      <number>5</number>
+                     </property>
+                     <property name="value">
+                      <number>0</number>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="1" column="5" colspan="2" alignment="Qt::AlignRight">
+                    <widget class="QLabel" name="scaleMallampatiLabel">
+                     <property name="text">
+                      <string>Escala Mallampati (Clase)</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item row="19" column="3">
+               <spacer name="verticalSpacer_50">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>20</width>
+                  <height>40</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item row="25" column="2" colspan="9">
+               <spacer name="horizontalSpacer_122">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item row="0" column="11">
+               <spacer name="horizontalSpacer_90">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item row="0" column="4">
+               <spacer name="horizontalSpacer_57">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item row="46" column="2">
+               <spacer name="verticalSpacer_46">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>20</width>
+                  <height>40</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item row="42" column="7" colspan="3">
+               <widget class="QFrame" name="spirometryTitleFrame">
+                <property name="styleSheet">
+                 <string notr="true">QSlider::groove:horizontal {
+    border: 1px solid;
+	border-color: rgb(17, 0, 255);
+    height: 10px;
+    margin: 0px;
+}
+
+QSlider::handle:horizontal {
+    background-color: rgb(11, 175, 225);
+    border: 1px solid;
+	border-color: rgb(11, 175, 225);
+    height: px;
+    width: 8px;
+	margin: -15px 0px;
+}</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_66">
+                 <item>
+                  <layout class="QGridLayout" name="gridLayout_4">
+                   <item row="0" column="0" colspan="2" alignment="Qt::AlignHCenter">
+                    <widget class="QLabel" name="spirometryLabel">
+                     <property name="text">
+                      <string>Espirometría</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="2">
+                    <widget class="QFrame" name="VIHFrame_2">
+                     <property name="styleSheet">
+                      <string notr="true">QFrame {
+	border: none;
+}
+QSlider::groove:horizontal {
+    border: 1px solid;
+	border-color: rgb(17, 0, 255);
+    height: 10px;
+    margin: 0px;
+}
+
+QSlider::handle:horizontal {
+    background-color: rgb(11, 175, 225);
+    border: 1px solid;
+	border-color: rgb(11, 175, 225);
+    height: px;
+    width: 8px;
+	margin: -15px 0px;
+}</string>
+                     </property>
+                     <property name="frameShape">
+                      <enum>QFrame::StyledPanel</enum>
+                     </property>
+                     <property name="frameShadow">
+                      <enum>QFrame::Raised</enum>
+                     </property>
+                     <layout class="QVBoxLayout" name="verticalLayout_58">
+                      <item>
+                       <layout class="QGridLayout" name="gridLayout_65">
+                        <item row="1" column="1" alignment="Qt::AlignRight">
+                         <widget class="QLabel" name="VIHYeslabel_4">
+                          <property name="text">
+                           <string>   SI  </string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item row="1" column="0">
+                         <widget class="QLabel" name="VIHNoLabel_4">
+                          <property name="text">
+                           <string>  NO  </string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item row="0" column="0" colspan="2">
+                         <widget class="QSlider" name="spirometry_slider">
+                          <property name="maximum">
+                           <number>1</number>
+                          </property>
+                          <property name="pageStep">
+                           <number>1</number>
+                          </property>
+                          <property name="orientation">
+                           <enum>Qt::Horizontal</enum>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item row="32" column="3">
+               <spacer name="verticalSpacer_31">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>20</width>
+                  <height>40</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item row="16" column="2" colspan="9">
+               <spacer name="horizontalSpacer_91">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item row="3" column="2" colspan="9">
+               <spacer name="horizontalSpacer_102">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item row="0" column="5">
+               <spacer name="horizontalSpacer_137">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item row="38" column="2" colspan="9">
+               <spacer name="horizontalSpacer_103">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item row="0" column="7">
+               <spacer name="horizontalSpacer_111">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item row="0" column="3">
+               <spacer name="horizontalSpacer_136">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item row="17" column="5" colspan="3">
+               <widget class="QFrame" name="historyTitleFrame">
+                <property name="styleSheet">
+                 <string notr="true"/>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_62">
+                 <item alignment="Qt::AlignHCenter">
+                  <widget class="QLabel" name="historyTitleLabel">
+                   <property name="text">
+                    <string>Historial</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <spacer name="horizontalSpacer_121">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item row="11" column="5" colspan="3">
+               <widget class="QFrame" name="vitalSignsTitleFrame">
+                <property name="styleSheet">
+                 <string notr="true"/>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QGridLayout" name="gridLayout_24">
+                 <item row="0" column="0" alignment="Qt::AlignHCenter">
+                  <widget class="QLabel" name="vitalSignsTitleLabel">
+                   <property name="text">
+                    <string>Signos Vitales</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item row="19" column="4" rowspan="6" colspan="5">
+               <widget class="QFrame" name="historyFrame">
+                <property name="styleSheet">
+                 <string notr="true">QFrame {
+	border-width: 2px;
+}
+
+QLabel {
+	border-color: none;
+}</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_68">
+                 <item>
+                  <layout class="QGridLayout" name="gridLayout_52">
+                   <item row="2" column="1">
+                    <widget class="QLabel" name="smokerLabel">
+                     <property name="text">
+                      <string>Tabaquismo</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="4">
+                    <spacer name="horizontalSpacer_126">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>40</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                   <item row="4" column="1">
+                    <widget class="QLabel" name="hypertensionLabel">
+                     <property name="text">
+                      <string>Hipertensión</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="4" column="2">
+                    <widget class="QFrame" name="hypertensionFrame">
+                     <property name="styleSheet">
+                      <string notr="true">QFrame {
+	border: none;
+}
+QSlider::groove:horizontal {
+    border: 1px solid;
+	border-color: rgb(17, 0, 255);
+    height: 10px;
+    margin: 0px;
+}
+
+QSlider::handle:horizontal {
+    background-color: rgb(11, 175, 225);
+    border: 1px solid;
+	border-color: rgb(11, 175, 225);
+    height: px;
+    width: 8px;
+	margin: -15px 0px;
+}</string>
+                     </property>
+                     <property name="frameShape">
+                      <enum>QFrame::StyledPanel</enum>
+                     </property>
+                     <property name="frameShadow">
+                      <enum>QFrame::Raised</enum>
+                     </property>
+                     <layout class="QVBoxLayout" name="verticalLayout_72">
+                      <item>
+                       <layout class="QGridLayout" name="gridLayout_56">
+                        <item row="0" column="0" colspan="2">
+                         <widget class="QSlider" name="hypertensionHorizontalSlider">
+                          <property name="maximum">
+                           <number>1</number>
+                          </property>
+                          <property name="pageStep">
+                           <number>1</number>
+                          </property>
+                          <property name="orientation">
+                           <enum>Qt::Horizontal</enum>
+                          </property>
+                         </widget>
+                        </item>
+                        <item row="1" column="1" alignment="Qt::AlignRight">
+                         <widget class="QLabel" name="hypertensionYesLabel">
+                          <property name="text">
+                           <string>SI</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item row="1" column="0">
+                         <widget class="QLabel" name="hypertensionNoLabel">
+                          <property name="text">
+                           <string>NO</string>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                   <item row="3" column="2">
+                    <widget class="QFrame" name="exsomkerFrame">
+                     <property name="styleSheet">
+                      <string notr="true">QFrame {
+	border: none;
+}
+QSlider::groove:horizontal {
+    border: 1px solid;
+	border-color: rgb(17, 0, 255);
+    height: 10px;
+    margin: 0px;
+}
+
+QSlider::handle:horizontal {
+    background-color: rgb(11, 175, 225);
+    border: 1px solid;
+	border-color: rgb(11, 175, 225);
+    height: px;
+    width: 8px;
+	margin: -15px 0px;
+}</string>
+                     </property>
+                     <property name="frameShape">
+                      <enum>QFrame::StyledPanel</enum>
+                     </property>
+                     <property name="frameShadow">
+                      <enum>QFrame::Raised</enum>
+                     </property>
+                     <layout class="QVBoxLayout" name="verticalLayout_71">
+                      <item>
+                       <layout class="QGridLayout" name="gridLayout_55">
+                        <item row="0" column="0" colspan="2">
+                         <widget class="QSlider" name="exsomkerHorizontalSlider">
+                          <property name="maximum">
+                           <number>1</number>
+                          </property>
+                          <property name="pageStep">
+                           <number>1</number>
+                          </property>
+                          <property name="orientation">
+                           <enum>Qt::Horizontal</enum>
+                          </property>
+                         </widget>
+                        </item>
+                        <item row="1" column="1" alignment="Qt::AlignRight">
+                         <widget class="QLabel" name="exsomkerYesLabel">
+                          <property name="text">
+                           <string>SI</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item row="1" column="0">
+                         <widget class="QLabel" name="exsomkerNoLabel">
+                          <property name="text">
+                           <string>NO</string>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                   <item row="1" column="1">
+                    <widget class="QLabel" name="oxigenUseLabel">
+                     <property name="text">
+                      <string>Uso de Oxigeno</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="5">
+                    <spacer name="horizontalSpacer_127">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>40</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                   <item row="2" column="2">
+                    <widget class="QFrame" name="smokerFrame">
+                     <property name="styleSheet">
+                      <string notr="true">QFrame {
+	border: none;
+}
+QSlider::groove:horizontal {
+    border: 1px solid;
+	border-color: rgb(17, 0, 255);
+    height: 10px;
+    margin: 0px;
+}
+
+QSlider::handle:horizontal {
+    background-color: rgb(11, 175, 225);
+    border: 1px solid;
+	border-color: rgb(11, 175, 225);
+    height: px;
+    width: 8px;
+	margin: -15px 0px;
+}</string>
+                     </property>
+                     <property name="frameShape">
+                      <enum>QFrame::StyledPanel</enum>
+                     </property>
+                     <property name="frameShadow">
+                      <enum>QFrame::Raised</enum>
+                     </property>
+                     <layout class="QVBoxLayout" name="verticalLayout_70">
+                      <item>
+                       <layout class="QGridLayout" name="gridLayout_54">
+                        <item row="0" column="0" colspan="2">
+                         <widget class="QSlider" name="smokerHorizontalSlider">
+                          <property name="maximum">
+                           <number>1</number>
+                          </property>
+                          <property name="pageStep">
+                           <number>1</number>
+                          </property>
+                          <property name="orientation">
+                           <enum>Qt::Horizontal</enum>
+                          </property>
+                         </widget>
+                        </item>
+                        <item row="1" column="1" alignment="Qt::AlignRight">
+                         <widget class="QLabel" name="smokerYesLabel">
+                          <property name="text">
+                           <string>SI</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item row="1" column="0">
+                         <widget class="QLabel" name="smokerNoLabel">
+                          <property name="text">
+                           <string>NO</string>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                   <item row="0" column="1">
+                    <spacer name="horizontalSpacer_128">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>40</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                   <item row="3" column="1">
+                    <widget class="QLabel" name="exsomkerLabel">
+                     <property name="text">
+                      <string>Exfumador</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="1" column="2">
+                    <widget class="QFrame" name="oxigenUseFrame">
+                     <property name="styleSheet">
+                      <string notr="true">QFrame {
+	border: none;
+}
+QSlider::groove:horizontal {
+    border: 1px solid;
+	border-color: rgb(17, 0, 255);
+    height: 10px;
+    margin: 0px;
+}
+
+QSlider::handle:horizontal {
+    background-color: rgb(11, 175, 225);
+    border: 1px solid;
+	border-color: rgb(11, 175, 225);
+    height: px;
+    width: 8px;
+	margin: -15px 0px;
+}</string>
+                     </property>
+                     <property name="frameShape">
+                      <enum>QFrame::StyledPanel</enum>
+                     </property>
+                     <property name="frameShadow">
+                      <enum>QFrame::Raised</enum>
+                     </property>
+                     <layout class="QVBoxLayout" name="verticalLayout_69">
+                      <item>
+                       <layout class="QGridLayout" name="gridLayout_53">
+                        <item row="0" column="0" colspan="2">
+                         <widget class="QSlider" name="oxigenUseHorizontalSlider">
+                          <property name="maximum">
+                           <number>1</number>
+                          </property>
+                          <property name="pageStep">
+                           <number>1</number>
+                          </property>
+                          <property name="orientation">
+                           <enum>Qt::Horizontal</enum>
+                          </property>
+                         </widget>
+                        </item>
+                        <item row="1" column="0">
+                         <widget class="QLabel" name="oxigenUseNoLabel">
+                          <property name="text">
+                           <string>NO</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item row="1" column="1" alignment="Qt::AlignRight">
+                         <widget class="QLabel" name="oxigenUseYesLabel">
+                          <property name="text">
+                           <string>SI</string>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                   <item row="0" column="3">
+                    <spacer name="horizontalSpacer_130">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>40</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                   <item row="6" column="0" colspan="6">
+                    <spacer name="horizontalSpacer_129">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>40</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                   <item row="0" column="2">
+                    <spacer name="horizontalSpacer_125">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>40</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                   <item row="1" column="4">
+                    <widget class="QLabel" name="snoringLabel">
+                     <property name="text">
+                      <string>Ronquidos</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="1" column="5">
+                    <widget class="QFrame" name="snoringFrame">
+                     <property name="styleSheet">
+                      <string notr="true">QFrame {
+	border: none;
+}
+QSlider::groove:horizontal {
+    border: 1px solid;
+	border-color: rgb(17, 0, 255);
+    height: 10px;
+    margin: 0px;
+}
+
+QSlider::handle:horizontal {
+    background-color: rgb(11, 175, 225);
+    border: 1px solid;
+	border-color: rgb(11, 175, 225);
+    height: px;
+    width: 8px;
+	margin: -15px 0px;
+}</string>
+                     </property>
+                     <property name="frameShape">
+                      <enum>QFrame::StyledPanel</enum>
+                     </property>
+                     <property name="frameShadow">
+                      <enum>QFrame::Raised</enum>
+                     </property>
+                     <layout class="QVBoxLayout" name="verticalLayout_73">
+                      <item>
+                       <layout class="QGridLayout" name="gridLayout_57">
+                        <item row="0" column="0" colspan="2">
+                         <widget class="QSlider" name="snoringHorizontalSlider">
+                          <property name="maximum">
+                           <number>1</number>
+                          </property>
+                          <property name="pageStep">
+                           <number>1</number>
+                          </property>
+                          <property name="orientation">
+                           <enum>Qt::Horizontal</enum>
+                          </property>
+                         </widget>
+                        </item>
+                        <item row="1" column="1" alignment="Qt::AlignRight">
+                         <widget class="QLabel" name="snoringYesLabel">
+                          <property name="text">
+                           <string>SI</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item row="1" column="0">
+                         <widget class="QLabel" name="snoringNoLabel">
+                          <property name="text">
+                           <string>NO</string>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                   <item row="2" column="4">
+                    <widget class="QLabel" name="witnessedApneasLabel">
+                     <property name="text">
+                      <string>Apneas Presenciadas</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="2" column="5">
+                    <widget class="QFrame" name="witnessedApneasFrame">
+                     <property name="styleSheet">
+                      <string notr="true">QFrame {
+	border: none;
+}
+QSlider::groove:horizontal {
+    border: 1px solid;
+	border-color: rgb(17, 0, 255);
+    height: 10px;
+    margin: 0px;
+}
+
+QSlider::handle:horizontal {
+    background-color: rgb(11, 175, 225);
+    border: 1px solid;
+	border-color: rgb(11, 175, 225);
+    height: px;
+    width: 8px;
+	margin: -15px 0px;
+}</string>
+                     </property>
+                     <property name="frameShape">
+                      <enum>QFrame::StyledPanel</enum>
+                     </property>
+                     <property name="frameShadow">
+                      <enum>QFrame::Raised</enum>
+                     </property>
+                     <layout class="QVBoxLayout" name="verticalLayout_74">
+                      <item>
+                       <layout class="QGridLayout" name="gridLayout_58">
+                        <item row="0" column="0" colspan="2">
+                         <widget class="QSlider" name="witnessedApneasHorizontalSlider">
+                          <property name="maximum">
+                           <number>1</number>
+                          </property>
+                          <property name="pageStep">
+                           <number>1</number>
+                          </property>
+                          <property name="orientation">
+                           <enum>Qt::Horizontal</enum>
+                          </property>
+                         </widget>
+                        </item>
+                        <item row="1" column="1" alignment="Qt::AlignRight">
+                         <widget class="QLabel" name="witnessedApneasYesLabel">
+                          <property name="text">
+                           <string>SI</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item row="1" column="0">
+                         <widget class="QLabel" name="witnessedApneasNoLabel">
+                          <property name="text">
+                           <string>NO</string>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                   <item row="3" column="4">
+                    <widget class="QLabel" name="chronicFatigueLabel">
+                     <property name="text">
+                      <string>Fatiga Crónica</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="3" column="5">
+                    <widget class="QFrame" name="chronicFatigueFrame">
+                     <property name="styleSheet">
+                      <string notr="true">QFrame {
+	border: none;
+}
+QSlider::groove:horizontal {
+    border: 1px solid;
+	border-color: rgb(17, 0, 255);
+    height: 10px;
+    margin: 0px;
+}
+
+QSlider::handle:horizontal {
+    background-color: rgb(11, 175, 225);
+    border: 1px solid;
+	border-color: rgb(11, 175, 225);
+    height: px;
+    width: 8px;
+	margin: -15px 0px;
+}</string>
+                     </property>
+                     <property name="frameShape">
+                      <enum>QFrame::StyledPanel</enum>
+                     </property>
+                     <property name="frameShadow">
+                      <enum>QFrame::Raised</enum>
+                     </property>
+                     <layout class="QVBoxLayout" name="verticalLayout_75">
+                      <item>
+                       <layout class="QGridLayout" name="gridLayout_59">
+                        <item row="0" column="0" colspan="2">
+                         <widget class="QSlider" name="chronicFatigueHorizontalSlider">
+                          <property name="maximum">
+                           <number>1</number>
+                          </property>
+                          <property name="pageStep">
+                           <number>1</number>
+                          </property>
+                          <property name="orientation">
+                           <enum>Qt::Horizontal</enum>
+                          </property>
+                         </widget>
+                        </item>
+                        <item row="1" column="1" alignment="Qt::AlignRight">
+                         <widget class="QLabel" name="chronicFatigueYesLabel">
+                          <property name="text">
+                           <string>SI</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item row="1" column="0">
+                         <widget class="QLabel" name="chronicFatigueNoLabel">
+                          <property name="text">
+                           <string>NO</string>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                   <item row="5" column="1" colspan="5">
+                    <widget class="QTextEdit" name="medicinesTextEdit">
+                     <property name="styleSheet">
+                      <string notr="true">QFrame{
+	border-radius: 0px;
+}</string>
+                     </property>
+                     <property name="placeholderText">
+                      <string>Medicamentos</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="4" column="4" colspan="2" alignment="Qt::AlignBottom">
+                    <widget class="QLabel" name="medicinesLabel">
+                     <property name="styleSheet">
+                      <string notr="true">QLabel {
+	border-width: 2px;
+	border-style: solid;
+	border-color: rgb(13, 182, 243);
+	border-bottom-color: none;
+}</string>
+                     </property>
+                     <property name="text">
+                      <string>Medicamentos</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item row="37" column="5" colspan="3">
+               <widget class="QFrame" name="diagnosticAssistantsTitleFrame">
+                <property name="styleSheet">
+                 <string notr="true">QSlider::groove:horizontal {
+    border: 1px solid;
+	border-color: rgb(17, 0, 255);
+    height: 10px;
+    margin: 0px;
+}
+
+QSlider::handle:horizontal {
+    background-color: rgb(11, 175, 225);
+    border: 1px solid;
+	border-color: rgb(11, 175, 225);
+    height: px;
+    width: 8px;
+	margin: -15px 0px;
+}</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QHBoxLayout" name="horizontalLayout">
+                 <item>
+                  <layout class="QGridLayout" name="gridLayout">
+                   <item row="0" column="0" colspan="2" alignment="Qt::AlignHCenter">
+                    <widget class="QLabel" name="diagnosticAssistantsTitleLabel">
+                     <property name="text">
+                      <string>Auxiliares de Diagnóstico</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="2">
+                    <layout class="QGridLayout" name="gridLayout_47">
+                     <item row="0" column="0" colspan="2">
+                      <widget class="QSlider" name="diagnostic_aids_slider">
+                       <property name="maximum">
+                        <number>1</number>
+                       </property>
+                       <property name="pageStep">
+                        <number>1</number>
+                       </property>
+                       <property name="orientation">
+                        <enum>Qt::Horizontal</enum>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="1" alignment="Qt::AlignRight">
+                      <widget class="QLabel" name="VIHYeslabel_2">
+                       <property name="text">
+                        <string>   SI  </string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="0">
+                      <widget class="QLabel" name="VIHNoLabel_2">
+                       <property name="text">
+                        <string>  NO  </string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </item>
+                  </layout>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item row="43" column="2" colspan="9">
+               <spacer name="horizontalSpacer_133">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item row="29" column="3">
+               <spacer name="verticalSpacer_48">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>20</width>
+                  <height>40</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item row="42" column="3" colspan="3">
+               <widget class="QFrame" name="bloodGasesTitleFrame">
+                <property name="styleSheet">
+                 <string notr="true">QSlider::groove:horizontal {
+    border: 1px solid;
+	border-color: rgb(17, 0, 255);
+    height: 10px;
+    margin: 0px;
+}
+
+QSlider::handle:horizontal {
+    background-color: rgb(11, 175, 225);
+    border: 1px solid;
+	border-color: rgb(11, 175, 225);
+    height: px;
+    width: 8px;
+	margin: -15px 0px;
+}</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_43">
+                 <item>
+                  <layout class="QGridLayout" name="gridLayout_3">
+                   <item row="0" column="2">
+                    <layout class="QGridLayout" name="gridLayout_61">
+                     <item row="0" column="0" colspan="2">
+                      <widget class="QSlider" name="blood_gases_slider">
+                       <property name="maximum">
+                        <number>1</number>
+                       </property>
+                       <property name="pageStep">
+                        <number>1</number>
+                       </property>
+                       <property name="orientation">
+                        <enum>Qt::Horizontal</enum>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="1" alignment="Qt::AlignRight">
+                      <widget class="QLabel" name="VIHYeslabel_3">
+                       <property name="text">
+                        <string>   SI  </string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="0">
+                      <widget class="QLabel" name="VIHNoLabel_3">
+                       <property name="text">
+                        <string>  NO  </string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </item>
+                   <item row="0" column="0" colspan="2" alignment="Qt::AlignHCenter">
+                    <widget class="QLabel" name="bloodGasesTitleLabel">
+                     <property name="text">
+                      <string>Gasometría Arterial</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item row="5" column="2" colspan="9">
+               <spacer name="horizontalSpacer_82">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item row="14" column="3">
+               <spacer name="verticalSpacer_53">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>20</width>
+                  <height>40</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item row="44" column="2">
+               <spacer name="verticalSpacer_39">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>20</width>
+                  <height>40</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item row="28" column="4" rowspan="8" colspan="5">
+               <widget class="QFrame" name="comorbilityCharlsonFrame">
+                <property name="styleSheet">
+                 <string notr="true">QFrame {
+	border-width: 2px;
+}
+
+QLabel {
+	border-color: none;
+}</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_46">
+                 <item>
+                  <layout class="QGridLayout" name="gridLayout_35">
+                   <item row="1" column="0" colspan="2">
+                    <widget class="QLabel" name="cardiacInsufficiencyLabel">
+                     <property name="text">
+                      <string>Insuficiencia Cardiaca</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="2">
+                    <spacer name="horizontalSpacer_78">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>40</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                   <item row="2" column="0" colspan="2">
+                    <widget class="QLabel" name="historyCerebralVascularAccidentLabel">
+                     <property name="text">
+                      <string>Antecedente de accidente cerebro vascular</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="11" column="0" colspan="2">
+                    <widget class="QLabel" name="renalDiseaseLabel">
+                     <property name="text">
+                      <string>Afección renal</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="3" column="2" colspan="2">
+                    <widget class="QFrame" name="peripherialVascularDiseaseFrame">
+                     <property name="styleSheet">
+                      <string notr="true">QFrame {
+	border: none;
+}
+QSlider::groove:horizontal {
+    border: 1px solid;
+	border-color: rgb(17, 0, 255);
+    height: 10px;
+    margin: 0px;
+}
+
+QSlider::handle:horizontal {
+    background-color: rgb(11, 175, 225);
+    border: 1px solid;
+	border-color: rgb(11, 175, 225);
+    height: px;
+    width: 8px;
+	margin: -15px 0px;
+}</string>
+                     </property>
+                     <property name="frameShape">
+                      <enum>QFrame::StyledPanel</enum>
+                     </property>
+                     <property name="frameShadow">
+                      <enum>QFrame::Raised</enum>
+                     </property>
+                     <layout class="QVBoxLayout" name="verticalLayout_49">
+                      <item>
+                       <layout class="QGridLayout" name="gridLayout_38">
+                        <item row="0" column="0" colspan="2">
+                         <widget class="QSlider" name="peripherialVascularDiseaseHorizontalSlider">
+                          <property name="maximum">
+                           <number>1</number>
+                          </property>
+                          <property name="pageStep">
+                           <number>1</number>
+                          </property>
+                          <property name="orientation">
+                           <enum>Qt::Horizontal</enum>
+                          </property>
+                         </widget>
+                        </item>
+                        <item row="1" column="1" alignment="Qt::AlignRight">
+                         <widget class="QLabel" name="peripherialVascularDiseaseYesLabel">
+                          <property name="text">
+                           <string>   SI  </string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item row="1" column="0">
+                         <widget class="QLabel" name="peripherialVascularDiseaseNoLabel">
+                          <property name="text">
+                           <string>  NO  </string>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                   <item row="5" column="0" colspan="2">
+                    <widget class="QLabel" name="EPOCLabel">
+                     <property name="text">
+                      <string>Enfermedad Pulmonar Obstructiva Crónica
+(EPOC)</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="3" column="0" colspan="2">
+                    <widget class="QLabel" name="peripherialVascularDiseaseLabel">
+                     <property name="text">
+                      <string>Enfermedad vascular periferica</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="0">
+                    <spacer name="horizontalSpacer_77">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>40</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                   <item row="7" column="0" colspan="2">
+                    <widget class="QLabel" name="liverDiseaseLabel">
+                     <property name="text">
+                      <string>Enfermedad Hepática</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="13" column="0" colspan="2">
+                    <widget class="QLabel" name="leukemiaLabel">
+                     <property name="text">
+                      <string>Leucemia</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="6" column="2" colspan="2">
+                    <widget class="QFrame" name="connectiveTissueDiseaseFrame">
+                     <property name="styleSheet">
+                      <string notr="true">QFrame {
+	border: none;
+}
+QSlider::groove:horizontal {
+    border: 1px solid;
+	border-color: rgb(17, 0, 255);
+    height: 10px;
+    margin: 0px;
+}
+
+QSlider::handle:horizontal {
+    background-color: rgb(11, 175, 225);
+    border: 1px solid;
+	border-color: rgb(11, 175, 225);
+    height: px;
+    width: 8px;
+	margin: -15px 0px;
+}</string>
+                     </property>
+                     <property name="frameShape">
+                      <enum>QFrame::StyledPanel</enum>
+                     </property>
+                     <property name="frameShadow">
+                      <enum>QFrame::Raised</enum>
+                     </property>
+                     <layout class="QVBoxLayout" name="verticalLayout_51">
+                      <item>
+                       <layout class="QGridLayout" name="gridLayout_40">
+                        <item row="0" column="0" colspan="2">
+                         <widget class="QSlider" name="connectiveTissueDiseaseHorizontalSlider">
+                          <property name="maximum">
+                           <number>1</number>
+                          </property>
+                          <property name="pageStep">
+                           <number>1</number>
+                          </property>
+                          <property name="orientation">
+                           <enum>Qt::Horizontal</enum>
+                          </property>
+                         </widget>
+                        </item>
+                        <item row="1" column="1" alignment="Qt::AlignRight">
+                         <widget class="QLabel" name="connectiveTissueDiseaseYesLabel">
+                          <property name="text">
+                           <string>   SI  </string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item row="1" column="0">
+                         <widget class="QLabel" name="connectiveTissueDiseaseNoLabel">
+                          <property name="text">
+                           <string>  NO  </string>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                   <item row="12" column="0" colspan="2">
+                    <widget class="QLabel" name="solidTumorLabel">
+                     <property name="text">
+                      <string>Tumor Sólido</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="1">
+                    <spacer name="horizontalSpacer_58">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>40</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                   <item row="12" column="2" colspan="2">
+                    <widget class="QFrame" name="solidTumorFrame">
+                     <property name="styleSheet">
+                      <string notr="true">QFrame {
+	border: none;
+}
+QSlider::groove:horizontal {
+    border: 1px solid;
+	border-color: rgb(17, 0, 255);
+    height: 10px;
+    margin: 0px;
+}
+
+QSlider::handle:horizontal {
+    background-color: rgb(11, 175, 225);
+    border: 1px solid;
+	border-color: rgb(11, 175, 225);
+    height: px;
+    width: 8px;
+	margin: -15px 0px;
+}</string>
+                     </property>
+                     <property name="frameShape">
+                      <enum>QFrame::StyledPanel</enum>
+                     </property>
+                     <property name="frameShadow">
+                      <enum>QFrame::Raised</enum>
+                     </property>
+                     <layout class="QVBoxLayout" name="verticalLayout_80">
+                      <item>
+                       <layout class="QGridLayout" name="gridLayout_63">
+                        <item row="1" column="1">
+                         <widget class="QLabel" name="solidTumorLocatedLabel">
+                          <property name="text">
+                           <string>Localizado</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item row="1" column="0">
+                         <widget class="QLabel" name="solidTumorNoLabel">
+                          <property name="text">
+                           <string>  NO  </string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item row="1" column="2" alignment="Qt::AlignRight">
+                         <widget class="QLabel" name="metastasisLabel">
+                          <property name="text">
+                           <string>Metástasis</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item row="0" column="0" colspan="3">
+                         <widget class="QSlider" name="solidTumorHorizontalSlider">
+                          <property name="maximum">
+                           <number>2</number>
+                          </property>
+                          <property name="pageStep">
+                           <number>1</number>
+                          </property>
+                          <property name="orientation">
+                           <enum>Qt::Horizontal</enum>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                   <item row="13" column="2" colspan="2">
+                    <widget class="QFrame" name="leukemiaFrame">
+                     <property name="styleSheet">
+                      <string notr="true">QFrame {
+	border: none;
+}
+QSlider::groove:horizontal {
+    border: 1px solid;
+	border-color: rgb(17, 0, 255);
+    height: 10px;
+    margin: 0px;
+}
+
+QSlider::handle:horizontal {
+    background-color: rgb(11, 175, 225);
+    border: 1px solid;
+	border-color: rgb(11, 175, 225);
+    height: px;
+    width: 8px;
+	margin: -15px 0px;
+}</string>
+                     </property>
+                     <property name="frameShape">
+                      <enum>QFrame::StyledPanel</enum>
+                     </property>
+                     <property name="frameShadow">
+                      <enum>QFrame::Raised</enum>
+                     </property>
+                     <layout class="QVBoxLayout" name="verticalLayout_55">
+                      <item>
+                       <layout class="QGridLayout" name="gridLayout_44">
+                        <item row="0" column="0" colspan="2">
+                         <widget class="QSlider" name="leukemiaHorizontalSlider">
+                          <property name="maximum">
+                           <number>1</number>
+                          </property>
+                          <property name="pageStep">
+                           <number>1</number>
+                          </property>
+                          <property name="orientation">
+                           <enum>Qt::Horizontal</enum>
+                          </property>
+                         </widget>
+                        </item>
+                        <item row="1" column="1" alignment="Qt::AlignRight">
+                         <widget class="QLabel" name="leukemiaYesLabel">
+                          <property name="text">
+                           <string>   SI  </string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item row="1" column="0">
+                         <widget class="QLabel" name="leukemiaNoLabel">
+                          <property name="text">
+                           <string>  NO  </string>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                   <item row="4" column="0" colspan="2">
+                    <widget class="QLabel" name="dementiaLabel">
+                     <property name="text">
+                      <string>Demencia</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="14" column="0" colspan="2">
+                    <widget class="QLabel" name="lymphomaLabel">
+                     <property name="text">
+                      <string>Linfoma</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="4" column="2" colspan="2">
+                    <widget class="QFrame" name="dementiaFrame">
+                     <property name="styleSheet">
+                      <string notr="true">QFrame {
+	border: none;
+}
+QSlider::groove:horizontal {
+    border: 1px solid;
+	border-color: rgb(17, 0, 255);
+    height: 10px;
+    margin: 0px;
+}
+
+QSlider::handle:horizontal {
+    background-color: rgb(11, 175, 225);
+    border: 1px solid;
+	border-color: rgb(11, 175, 225);
+    height: px;
+    width: 8px;
+	margin: -15px 0px;
+}</string>
+                     </property>
+                     <property name="frameShape">
+                      <enum>QFrame::StyledPanel</enum>
+                     </property>
+                     <property name="frameShadow">
+                      <enum>QFrame::Raised</enum>
+                     </property>
+                     <layout class="QVBoxLayout" name="verticalLayout_79">
+                      <item>
+                       <layout class="QGridLayout" name="gridLayout_62">
+                        <item row="0" column="0" colspan="2">
+                         <widget class="QSlider" name="dementiaHorizontalSlider">
+                          <property name="maximum">
+                           <number>1</number>
+                          </property>
+                          <property name="pageStep">
+                           <number>1</number>
+                          </property>
+                          <property name="orientation">
+                           <enum>Qt::Horizontal</enum>
+                          </property>
+                         </widget>
+                        </item>
+                        <item row="1" column="1" alignment="Qt::AlignRight">
+                         <widget class="QLabel" name="dementiaYesLabel">
+                          <property name="text">
+                           <string>   SI  </string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item row="1" column="0">
+                         <widget class="QLabel" name="dementiaNoLabel">
+                          <property name="text">
+                           <string>  NO  </string>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                   <item row="5" column="2" colspan="2">
+                    <widget class="QFrame" name="EPOCFrame">
+                     <property name="styleSheet">
+                      <string notr="true">QFrame {
+	border: none;
+}
+QSlider::groove:horizontal {
+    border: 1px solid;
+	border-color: rgb(17, 0, 255);
+    height: 10px;
+    margin: 0px;
+}
+
+QSlider::handle:horizontal {
+    background-color: rgb(11, 175, 225);
+    border: 1px solid;
+	border-color: rgb(11, 175, 225);
+    height: px;
+    width: 8px;
+	margin: -15px 0px;
+}</string>
+                     </property>
+                     <property name="frameShape">
+                      <enum>QFrame::StyledPanel</enum>
+                     </property>
+                     <property name="frameShadow">
+                      <enum>QFrame::Raised</enum>
+                     </property>
+                     <layout class="QVBoxLayout" name="verticalLayout_50">
+                      <item>
+                       <layout class="QGridLayout" name="gridLayout_39">
+                        <item row="0" column="0" colspan="2">
+                         <widget class="QSlider" name="EPOCHorizontalSlider">
+                          <property name="maximum">
+                           <number>1</number>
+                          </property>
+                          <property name="pageStep">
+                           <number>1</number>
+                          </property>
+                          <property name="orientation">
+                           <enum>Qt::Horizontal</enum>
+                          </property>
+                         </widget>
+                        </item>
+                        <item row="1" column="1" alignment="Qt::AlignRight">
+                         <widget class="QLabel" name="EPOCYesLabel">
+                          <property name="text">
+                           <string>   SI  </string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item row="1" column="0">
+                         <widget class="QLabel" name="EPOCNoLabel">
+                          <property name="text">
+                           <string>  NO  </string>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                   <item row="17" column="2" colspan="2">
+                    <widget class="QLineEdit" name="comorbilityCharlsonTotalLineEdit">
+                     <property name="readOnly">
+                      <bool>true</bool>
+                     </property>
+                     <property name="placeholderText">
+                      <string>0</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="6" column="0" colspan="2">
+                    <widget class="QLabel" name="connectiveTissueDiseaseLabel">
+                     <property name="text">
+                      <string>Enfermedad de tejido conectivo</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="15" column="0" colspan="2">
+                    <widget class="QLabel" name="VIHLabel">
+                     <property name="text">
+                      <string>VIH </string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="18" column="0" colspan="4">
+                    <spacer name="horizontalSpacer_76">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>40</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                   <item row="0" column="3">
+                    <spacer name="horizontalSpacer_75">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>40</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                   <item row="7" column="2" colspan="2">
+                    <widget class="QFrame" name="liverDiseaseFrame">
+                     <property name="styleSheet">
+                      <string notr="true">QFrame {
+	border: none;
+}
+QSlider::groove:horizontal {
+    border: 1px solid;
+	border-color: rgb(17, 0, 255);
+    height: 10px;
+    margin: 0px;
+}
+
+QSlider::handle:horizontal {
+    background-color: rgb(11, 175, 225);
+    border: 1px solid;
+	border-color: rgb(11, 175, 225);
+    height: px;
+    width: 8px;
+	margin: -15px 0px;
+}</string>
+                     </property>
+                     <property name="frameShape">
+                      <enum>QFrame::StyledPanel</enum>
+                     </property>
+                     <property name="frameShadow">
+                      <enum>QFrame::Raised</enum>
+                     </property>
+                     <layout class="QVBoxLayout" name="verticalLayout_52">
+                      <item>
+                       <layout class="QGridLayout" name="gridLayout_41">
+                        <item row="0" column="0" colspan="2">
+                         <widget class="QSlider" name="liverDiseaseHorizontalSlider">
+                          <property name="maximum">
+                           <number>1</number>
+                          </property>
+                          <property name="pageStep">
+                           <number>1</number>
+                          </property>
+                          <property name="orientation">
+                           <enum>Qt::Horizontal</enum>
+                          </property>
+                         </widget>
+                        </item>
+                        <item row="1" column="1" alignment="Qt::AlignRight">
+                         <widget class="QLabel" name="liverDiseaseYesLabel">
+                          <property name="text">
+                           <string>   SI  </string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item row="1" column="0">
+                         <widget class="QLabel" name="liverDiseaseNoLabel">
+                          <property name="text">
+                           <string>  NO  </string>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                   <item row="2" column="2" colspan="2">
+                    <widget class="QFrame" name="historyCerebralVascularAccidentFrame">
+                     <property name="styleSheet">
+                      <string notr="true">QFrame {
+	border: none;
+}
+QSlider::groove:horizontal {
+    border: 1px solid;
+	border-color: rgb(17, 0, 255);
+    height: 10px;
+    margin: 0px;
+}
+
+QSlider::handle:horizontal {
+    background-color: rgb(11, 175, 225);
+    border: 1px solid;
+	border-color: rgb(11, 175, 225);
+    height: px;
+    width: 8px;
+	margin: -15px 0px;
+}</string>
+                     </property>
+                     <property name="frameShape">
+                      <enum>QFrame::StyledPanel</enum>
+                     </property>
+                     <property name="frameShadow">
+                      <enum>QFrame::Raised</enum>
+                     </property>
+                     <layout class="QVBoxLayout" name="verticalLayout_48">
+                      <item>
+                       <layout class="QGridLayout" name="gridLayout_37">
+                        <item row="1" column="0">
+                         <widget class="QLabel" name="historyCerebralVascularAccidentNoLabel">
+                          <property name="text">
+                           <string>  NO  </string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item row="0" column="0" colspan="2">
+                         <widget class="QSlider" name="historyCerebralVascularAccidentHorizontalSlider">
+                          <property name="maximum">
+                           <number>1</number>
+                          </property>
+                          <property name="pageStep">
+                           <number>1</number>
+                          </property>
+                          <property name="orientation">
+                           <enum>Qt::Horizontal</enum>
+                          </property>
+                         </widget>
+                        </item>
+                        <item row="1" column="1" alignment="Qt::AlignRight">
+                         <widget class="QLabel" name="historyCerebralVascularAccidentYesLabel">
+                          <property name="text">
+                           <string>   SI  </string>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                   <item row="1" column="2" colspan="2">
+                    <widget class="QFrame" name="cardiacInsufficiencyFrame">
+                     <property name="styleSheet">
+                      <string notr="true">QFrame {
+	border: none;
+}
+QSlider::groove:horizontal {
+    border: 1px solid;
+	border-color: rgb(17, 0, 255);
+    height: 10px;
+    margin: 0px;
+}
+
+QSlider::handle:horizontal {
+    background-color: rgb(11, 175, 225);
+    border: 1px solid;
+	border-color: rgb(11, 175, 225);
+    height: px;
+    width: 8px;
+	margin: -15px 0px;
+}</string>
+                     </property>
+                     <property name="frameShape">
+                      <enum>QFrame::StyledPanel</enum>
+                     </property>
+                     <property name="frameShadow">
+                      <enum>QFrame::Raised</enum>
+                     </property>
+                     <layout class="QVBoxLayout" name="verticalLayout_47">
+                      <item>
+                       <layout class="QGridLayout" name="gridLayout_36">
+                        <item row="1" column="0">
+                         <widget class="QLabel" name="cardiacInsufficiencyNoLabel">
+                          <property name="text">
+                           <string>  NO  </string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item row="1" column="1" alignment="Qt::AlignRight">
+                         <widget class="QLabel" name="cardiacInsufficiencyYesLabel">
+                          <property name="text">
+                           <string>   SI  </string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item row="0" column="0" colspan="2">
+                         <widget class="QSlider" name="cardiacInsufficiencyHorizontalSlider">
+                          <property name="maximum">
+                           <number>1</number>
+                          </property>
+                          <property name="pageStep">
+                           <number>1</number>
+                          </property>
+                          <property name="orientation">
+                           <enum>Qt::Horizontal</enum>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                   <item row="14" column="2" colspan="2">
+                    <widget class="QFrame" name="lymphomaFrame">
+                     <property name="styleSheet">
+                      <string notr="true">QFrame {
+	border: none;
+}
+QSlider::groove:horizontal {
+    border: 1px solid;
+	border-color: rgb(17, 0, 255);
+    height: 10px;
+    margin: 0px;
+}
+
+QSlider::handle:horizontal {
+    background-color: rgb(11, 175, 225);
+    border: 1px solid;
+	border-color: rgb(11, 175, 225);
+    height: px;
+    width: 8px;
+	margin: -15px 0px;
+}</string>
+                     </property>
+                     <property name="frameShape">
+                      <enum>QFrame::StyledPanel</enum>
+                     </property>
+                     <property name="frameShadow">
+                      <enum>QFrame::Raised</enum>
+                     </property>
+                     <layout class="QVBoxLayout" name="verticalLayout_56">
+                      <item>
+                       <layout class="QGridLayout" name="gridLayout_45">
+                        <item row="0" column="0" colspan="2">
+                         <widget class="QSlider" name="lymphomaHorizontalSlider">
+                          <property name="maximum">
+                           <number>1</number>
+                          </property>
+                          <property name="pageStep">
+                           <number>1</number>
+                          </property>
+                          <property name="orientation">
+                           <enum>Qt::Horizontal</enum>
+                          </property>
+                         </widget>
+                        </item>
+                        <item row="1" column="1" alignment="Qt::AlignRight">
+                         <widget class="QLabel" name="lymphomaYesLabel">
+                          <property name="text">
+                           <string>   SI  </string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item row="1" column="0">
+                         <widget class="QLabel" name="lymphomaNoLabel">
+                          <property name="text">
+                           <string>  NO  </string>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                   <item row="8" column="2" rowspan="2" colspan="2">
+                    <widget class="QFrame" name="diabetesMilitusFrame">
+                     <property name="styleSheet">
+                      <string notr="true">QFrame {
+	border: none;
+}
+QSlider::groove:horizontal {
+    border: 1px solid;
+	border-color: rgb(17, 0, 255);
+    height: 10px;
+    margin: 0px;
+}
+
+QSlider::handle:horizontal {
+    background-color: rgb(11, 175, 225);
+    border: 1px solid;
+	border-color: rgb(11, 175, 225);
+    height: px;
+    width: 8px;
+	margin: -15px 0px;
+}
+
+QLabel {
+	font-size: 12px;
+}</string>
+                     </property>
+                     <property name="frameShape">
+                      <enum>QFrame::StyledPanel</enum>
+                     </property>
+                     <property name="frameShadow">
+                      <enum>QFrame::Raised</enum>
+                     </property>
+                     <layout class="QVBoxLayout" name="verticalLayout_53">
+                      <item>
+                       <layout class="QGridLayout" name="gridLayout_42">
+                        <item row="1" column="1" alignment="Qt::AlignHCenter">
+                         <widget class="QLabel" name="diabetesMilitusNoComplicatedLabel">
+                          <property name="text">
+                           <string>      No
+Complicado</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item row="1" column="0" alignment="Qt::AlignLeft">
+                         <widget class="QLabel" name="diabetesMilitusNoLabel">
+                          <property name="text">
+                           <string>     No /
+Controlado</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item row="1" column="2" alignment="Qt::AlignRight">
+                         <widget class="QLabel" name="diabetesMilitusYesLabel">
+                          <property name="text">
+                           <string>Daño a
+Organo
+Blanco</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item row="0" column="0" colspan="3">
+                         <widget class="QSlider" name="diabetesMilitusHorizontalSlider">
+                          <property name="maximum">
+                           <number>2</number>
+                          </property>
+                          <property name="pageStep">
+                           <number>1</number>
+                          </property>
+                          <property name="orientation">
+                           <enum>Qt::Horizontal</enum>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                   <item row="17" column="1" alignment="Qt::AlignRight">
+                    <widget class="QLabel" name="comorbilityCharlsonTotalLabel">
+                     <property name="text">
+                      <string>Total</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="16" column="0" colspan="4">
+                    <spacer name="horizontalSpacer_74">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>40</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                   <item row="15" column="2" colspan="2">
+                    <widget class="QFrame" name="VIHFrame">
+                     <property name="styleSheet">
+                      <string notr="true">QFrame {
+	border: none;
+}
+QSlider::groove:horizontal {
+    border: 1px solid;
+	border-color: rgb(17, 0, 255);
+    height: 10px;
+    margin: 0px;
+}
+
+QSlider::handle:horizontal {
+    background-color: rgb(11, 175, 225);
+    border: 1px solid;
+	border-color: rgb(11, 175, 225);
+    height: px;
+    width: 8px;
+	margin: -15px 0px;
+}</string>
+                     </property>
+                     <property name="frameShape">
+                      <enum>QFrame::StyledPanel</enum>
+                     </property>
+                     <property name="frameShadow">
+                      <enum>QFrame::Raised</enum>
+                     </property>
+                     <layout class="QVBoxLayout" name="verticalLayout_57">
+                      <item>
+                       <layout class="QGridLayout" name="gridLayout_46">
+                        <item row="0" column="0" colspan="2">
+                         <widget class="QSlider" name="VIHHorizontalSlider">
+                          <property name="maximum">
+                           <number>1</number>
+                          </property>
+                          <property name="pageStep">
+                           <number>1</number>
+                          </property>
+                          <property name="orientation">
+                           <enum>Qt::Horizontal</enum>
+                          </property>
+                         </widget>
+                        </item>
+                        <item row="1" column="1" alignment="Qt::AlignRight">
+                         <widget class="QLabel" name="VIHYeslabel">
+                          <property name="text">
+                           <string>   SI  </string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item row="1" column="0">
+                         <widget class="QLabel" name="VIHNoLabel">
+                          <property name="text">
+                           <string>  NO  </string>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                   <item row="8" column="0" rowspan="2" colspan="2">
+                    <widget class="QLabel" name="diabetesMilitusLabel">
+                     <property name="text">
+                      <string>Diabetes mellitus</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="11" column="2" colspan="2">
+                    <widget class="QFrame" name="renalDiseaseFrame">
+                     <property name="styleSheet">
+                      <string notr="true">QFrame {
+	border: none;
+}
+QSlider::groove:horizontal {
+    border: 1px solid;
+	border-color: rgb(17, 0, 255);
+    height: 10px;
+    margin: 0px;
+}
+
+QSlider::handle:horizontal {
+    background-color: rgb(11, 175, 225);
+    border: 1px solid;
+	border-color: rgb(11, 175, 225);
+    height: px;
+    width: 8px;
+	margin: -15px 0px;
+}</string>
+                     </property>
+                     <property name="frameShape">
+                      <enum>QFrame::StyledPanel</enum>
+                     </property>
+                     <property name="frameShadow">
+                      <enum>QFrame::Raised</enum>
+                     </property>
+                     <layout class="QVBoxLayout" name="verticalLayout_54">
+                      <item>
+                       <layout class="QGridLayout" name="gridLayout_43">
+                        <item row="1" column="1" alignment="Qt::AlignRight">
+                         <widget class="QLabel" name="renalDiseaseYesLabel">
+                          <property name="text">
+                           <string>SI  </string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item row="1" column="0">
+                         <widget class="QLabel" name="renalDiseaseNoLabel">
+                          <property name="text">
+                           <string>  NO  </string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item row="0" column="0" colspan="2">
+                         <widget class="QSlider" name="renalDiseaseHorizontalSlider">
+                          <property name="maximum">
+                           <number>1</number>
+                          </property>
+                          <property name="pageStep">
+                           <number>1</number>
+                          </property>
+                          <property name="orientation">
+                           <enum>Qt::Horizontal</enum>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                   <item row="10" column="2" colspan="2">
+                    <widget class="QFrame" name="liverDiseaseFrame_2">
+                     <property name="styleSheet">
+                      <string notr="true">QFrame {
+	border: none;
+}
+QSlider::groove:horizontal {
+    border: 1px solid;
+	border-color: rgb(17, 0, 255);
+    height: 10px;
+    margin: 0px;
+}
+
+QSlider::handle:horizontal {
+    background-color: rgb(11, 175, 225);
+    border: 1px solid;
+	border-color: rgb(11, 175, 225);
+    height: px;
+    width: 8px;
+	margin: -15px 0px;
+}</string>
+                     </property>
+                     <property name="frameShape">
+                      <enum>QFrame::StyledPanel</enum>
+                     </property>
+                     <property name="frameShadow">
+                      <enum>QFrame::Raised</enum>
+                     </property>
+                     <layout class="QVBoxLayout" name="verticalLayout_81">
+                      <item>
+                       <layout class="QGridLayout" name="gridLayout_64">
+                        <item row="0" column="0" colspan="2">
+                         <widget class="QSlider" name="hemiplegiaHorizontalSlider">
+                          <property name="maximum">
+                           <number>1</number>
+                          </property>
+                          <property name="pageStep">
+                           <number>1</number>
+                          </property>
+                          <property name="orientation">
+                           <enum>Qt::Horizontal</enum>
+                          </property>
+                         </widget>
+                        </item>
+                        <item row="1" column="1" alignment="Qt::AlignRight">
+                         <widget class="QLabel" name="hemiplegiaYesLabel">
+                          <property name="text">
+                           <string>   SI  </string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item row="1" column="0">
+                         <widget class="QLabel" name="hemiplegiaNoLabel">
+                          <property name="text">
+                           <string>  NO  </string>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                   <item row="10" column="0" colspan="2">
+                    <widget class="QLabel" name="hemiplegiaLabel">
+                     <property name="text">
+                      <string>Hemiplejia</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item row="26" column="5" colspan="3">
+               <widget class="QFrame" name="comorbilityCharlsonTitleFrame">
+                <property name="styleSheet">
+                 <string notr="true"/>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_77">
+                 <item alignment="Qt::AlignHCenter">
+                  <widget class="QLabel" name="comorbilityCharlsonTitleLabel">
+                   <property name="text">
+                    <string>Comorbilidad de Charlson</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item row="34" column="3">
+               <spacer name="verticalSpacer_38">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>20</width>
+                  <height>40</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item row="4" column="5" colspan="3">
+               <widget class="QFrame" name="weightHeightIMCTitleFrame">
+                <property name="styleSheet">
+                 <string notr="true"/>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_64">
+                 <item alignment="Qt::AlignHCenter">
+                  <widget class="QLabel" name="weightHeightIMCTitleLabel">
+                   <property name="text">
+                    <string>Peso, Estatura e IMC</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item row="31" column="3">
+               <spacer name="verticalSpacer_44">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>20</width>
+                  <height>40</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item row="49" column="2">
+               <spacer name="horizontalSpacer_140">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item row="0" column="8">
+               <spacer name="horizontalSpacer_131">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item row="20" column="3">
+               <spacer name="verticalSpacer_56">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>20</width>
+                  <height>40</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item row="13" column="3">
+               <spacer name="verticalSpacer_49">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>20</width>
+                  <height>40</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item row="2" column="2" colspan="9">
+               <widget class="QFrame" name="titleFrame">
+                <property name="styleSheet">
+                 <string notr="true">QFrame {
+	border-width: 5px;
+}
+QLabel {
+	font-size: 16px;
+}</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_45">
+                 <item>
+                  <widget class="QLabel" name="titleRegistryLabel">
+                   <property name="text">
+                    <string>Registro Médico</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item row="0" column="6">
+               <spacer name="horizontalSpacer_81">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item row="33" column="3">
+               <spacer name="verticalSpacer_34">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>20</width>
+                  <height>40</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item row="50" column="2" colspan="7">
+               <spacer name="horizontalSpacer_116">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item row="50" column="9" colspan="2">
+               <widget class="QPushButton" name="nextPageButton">
+                <property name="text">
+                 <string>Siguiente</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <tabstops>
+  <tabstop>scrollArea</tabstop>
+  <tabstop>weightLineEdit</tabstop>
+  <tabstop>heightLineEdit</tabstop>
+  <tabstop>neckCircumferenceLineEdit</tabstop>
+  <tabstop>BMILineEdit</tabstop>
+  <tabstop>heartRateSpinBox</tabstop>
+  <tabstop>respiratoryFrequencySpinBox</tabstop>
+  <tabstop>oxigenSaturationSpinBox</tabstop>
+  <tabstop>systolic_blood_pressure_spin_box</tabstop>
+  <tabstop>diastolic_blood_pressure_spin_box</tabstop>
+  <tabstop>temperatureDoubleSpinBox</tabstop>
+  <tabstop>oxigenUseHorizontalSlider</tabstop>
+  <tabstop>smokerHorizontalSlider</tabstop>
+  <tabstop>exsomkerHorizontalSlider</tabstop>
+  <tabstop>hypertensionHorizontalSlider</tabstop>
+  <tabstop>snoringHorizontalSlider</tabstop>
+  <tabstop>witnessedApneasHorizontalSlider</tabstop>
+  <tabstop>chronicFatigueHorizontalSlider</tabstop>
+  <tabstop>medicinesTextEdit</tabstop>
+  <tabstop>cardiacInsufficiencyHorizontalSlider</tabstop>
+  <tabstop>historyCerebralVascularAccidentHorizontalSlider</tabstop>
+  <tabstop>peripherialVascularDiseaseHorizontalSlider</tabstop>
+  <tabstop>dementiaHorizontalSlider</tabstop>
+  <tabstop>EPOCHorizontalSlider</tabstop>
+  <tabstop>connectiveTissueDiseaseHorizontalSlider</tabstop>
+  <tabstop>liverDiseaseHorizontalSlider</tabstop>
+  <tabstop>diabetesMilitusHorizontalSlider</tabstop>
+  <tabstop>hemiplegiaHorizontalSlider</tabstop>
+  <tabstop>renalDiseaseHorizontalSlider</tabstop>
+  <tabstop>solidTumorHorizontalSlider</tabstop>
+  <tabstop>leukemiaHorizontalSlider</tabstop>
+  <tabstop>lymphomaHorizontalSlider</tabstop>
+  <tabstop>VIHHorizontalSlider</tabstop>
+  <tabstop>comorbilityCharlsonTotalLineEdit</tabstop>
+  <tabstop>scaleEpworthSpinBox</tabstop>
+  <tabstop>ETco2SpinBox</tabstop>
+  <tabstop>scaleMallampatiSpinBox</tabstop>
+  <tabstop>PHDoubleSpinBox</tabstop>
+  <tabstop>pCO2SpinBox</tabstop>
+  <tabstop>pO2SpinBox</tabstop>
+  <tabstop>EBDoubleSpinBox</tabstop>
+  <tabstop>FVClitrosDoubleSpinBox</tabstop>
+  <tabstop>FVCSpinBox</tabstop>
+  <tabstop>FEV1litrosDoubleSpinBox</tabstop>
+  <tabstop>FEV1LSpinBox</tabstop>
+  <tabstop>FEV1LFVCLitrosLineEdit</tabstop>
+  <tabstop>nextPageButton</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>

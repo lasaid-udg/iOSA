@@ -1,0 +1,8 @@
+<RCC>
+  <qresource prefix="iconPrefix">
+    <file>csv_file_logo.png</file>
+    <file>Logo.png</file>
+    <file>no_video_loaded_logo.png</file>
+    <file>excel_file_logo.png</file>
+  </qresource>
+</RCC>
