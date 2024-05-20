@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>inSAsy - Registro Paciente</string>
+   <string>iOSA - Create Patient Profile</string>
   </property>
   <property name="styleSheet">
    <string notr="true">QWidget {
@@ -355,7 +355,7 @@ QLabel {
            <item>
             <widget class="QLabel" name="titleRegistryLabel">
              <property name="text">
-              <string>Formulario de Registro</string>
+              <string>Registration Form</string>
              </property>
             </widget>
            </item>
@@ -407,7 +407,7 @@ QCheckBox {
                 <enum>Qt::LeftToRight</enum>
                </property>
                <property name="text">
-                <string>Día      </string>
+                <string>Day</string>
                </property>
               </widget>
              </item>
@@ -442,21 +442,21 @@ border-radius: none;</string>
                   <item row="0" column="0">
                    <widget class="QRadioButton" name="genderMaleRadioButton">
                     <property name="text">
-                     <string>Hombre</string>
+                     <string>Male</string>
                     </property>
                    </widget>
                   </item>
                   <item row="0" column="1">
                    <widget class="QRadioButton" name="genderFemaleRadioButton">
                     <property name="text">
-                     <string>Mujer</string>
+                     <string>Female</string>
                     </property>
                    </widget>
                   </item>
                   <item row="1" column="0" colspan="2" alignment="Qt::AlignHCenter">
                    <widget class="QRadioButton" name="genderOtherRadioButton">
                     <property name="text">
-                     <string>Otro</string>
+                     <string>Other</string>
                     </property>
                    </widget>
                   </item>
@@ -468,7 +468,7 @@ border-radius: none;</string>
              <item row="0" column="4" rowspan="2" alignment="Qt::AlignHCenter">
               <widget class="QLabel" name="birthYearLabel">
                <property name="text">
-                <string>Año      </string>
+                <string>Year</string>
                </property>
               </widget>
              </item>
@@ -485,14 +485,14 @@ border-radius: none;</string>
              <item row="0" column="6" rowspan="2" alignment="Qt::AlignRight">
               <widget class="QLabel" name="genderLabel">
                <property name="text">
-                <string>Sexo   </string>
+                <string>Genre</string>
                </property>
               </widget>
              </item>
              <item row="0" column="2" rowspan="2" alignment="Qt::AlignHCenter">
               <widget class="QLabel" name="birthMonthLabel">
                <property name="text">
-                <string>Mes      </string>
+                <string>Month</string>
                </property>
               </widget>
              </item>
@@ -620,7 +620,7 @@ border-radius: none;</string>
            <item>
             <widget class="QLabel" name="fullNameTitleLabel">
              <property name="text">
-              <string>Acrónimo Y NSS</string>
+              <string>Acronym And NSS</string>
              </property>
             </widget>
            </item>
@@ -678,25 +678,6 @@ border-radius: none;</string>
            </size>
           </property>
          </spacer>
-        </item>
-        <item row="15" column="2" colspan="5">
-         <widget class="QFrame" name="frame">
-          <property name="frameShape">
-           <enum>QFrame::StyledPanel</enum>
-          </property>
-          <property name="frameShadow">
-           <enum>QFrame::Raised</enum>
-          </property>
-          <layout class="QVBoxLayout" name="verticalLayout_3">
-           <item>
-            <widget class="QLabel" name="label">
-             <property name="text">
-              <string>Fecha de Nacimiento</string>
-             </property>
-            </widget>
-           </item>
-          </layout>
-         </widget>
         </item>
         <item row="5" column="2" colspan="9">
          <spacer name="horizontalSpacer_80">
@@ -841,7 +822,7 @@ QLabel {
                 <number>8</number>
                </property>
                <property name="placeholderText">
-                <string>Acrónimo (Ejemplo: EDGA)</string>
+                <string>Acronym (Example: EDGA)</string>
                </property>
               </widget>
              </item>
@@ -903,7 +884,7 @@ QLabel {
                 <number>10</number>
                </property>
                <property name="placeholderText">
-                <string>Número de Seguro Social</string>
+                <string>Social Security number</string>
                </property>
               </widget>
              </item>
@@ -923,7 +904,7 @@ QLabel {
              <item row="0" column="0" rowspan="2">
               <widget class="QLabel" name="acronym_label">
                <property name="text">
-                <string>Acrónimo</string>
+                <string>Acronym</string>
                </property>
               </widget>
              </item>
@@ -942,7 +923,7 @@ QLabel {
         <item row="22" column="9" colspan="2">
          <widget class="QPushButton" name="create_new_patient_push_button">
           <property name="text">
-           <string>Crear Nuevo Paciente</string>
+           <string>Create New Patient Profile</string>
           </property>
          </widget>
         </item>
@@ -953,8 +934,27 @@ QLabel {
 border-color: rgb(232, 0, 0);</string>
           </property>
           <property name="text">
-           <string>Cancelar Registro</string>
+           <string>Cancel Registration</string>
           </property>
+         </widget>
+        </item>
+        <item row="15" column="2" colspan="5">
+         <widget class="QFrame" name="frame">
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_3">
+           <item>
+            <widget class="QLabel" name="label">
+             <property name="text">
+              <string>Birthdate</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
          </widget>
         </item>
        </layout>

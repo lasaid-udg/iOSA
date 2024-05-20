@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>inSAsy - Editar</string>
+   <string>iOSA - Edit Patient Data</string>
   </property>
   <property name="windowIcon">
    <iconset>

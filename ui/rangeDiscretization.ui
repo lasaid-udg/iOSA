@@ -23,7 +23,7 @@
    </size>
   </property>
   <property name="windowTitle">
-   <string>Form</string>
+   <string>iOSA- Set Discretize Ranges</string>
   </property>
   <property name="styleSheet">
    <string notr="true">QFrame {
@@ -172,7 +172,7 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
            <x>0</x>
            <y>0</y>
            <width>892</width>
-           <height>587</height>
+           <height>590</height>
           </rect>
          </property>
          <layout class="QVBoxLayout" name="verticalLayout">
@@ -193,7 +193,7 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
       <item>
        <widget class="QPushButton" name="applyRangesButton">
         <property name="text">
-         <string>Aceptar</string>
+         <string>Accept</string>
         </property>
        </widget>
       </item>
