@@ -924,7 +924,7 @@ Generated</string>
         <item row="7" column="14" colspan="5">
          <widget class="QCheckBox" name="polysomnography_checkbox">
           <property name="text">
-           <string>Poligrafìa</string>
+           <string>Polygraphy</string>
           </property>
          </widget>
         </item>

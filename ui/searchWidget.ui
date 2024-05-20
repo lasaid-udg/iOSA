@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>inSAsy - Busquda Paciente</string>
+   <string>iOSA - Patient Search</string>
   </property>
   <property name="styleSheet">
    <string notr="true">QScrollBar:vertical {
@@ -506,17 +506,17 @@ QComboBox
           </item>
           <item>
            <property name="text">
-            <string>Acrónimo</string>
+            <string>Acronym</string>
            </property>
           </item>
           <item>
            <property name="text">
-            <string>Edad</string>
+            <string>Age</string>
            </property>
           </item>
           <item>
            <property name="text">
-            <string>Fecha Registro</string>
+            <string>Registry Date</string>
            </property>
           </item>
          </widget>

@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>inSAsy - Carga Video</string>
+   <string>iOSA - Load Video</string>
   </property>
   <property name="styleSheet">
    <string notr="true">QWidget {
@@ -273,7 +273,7 @@ QLabel{
         <item row="12" column="2">
          <widget class="QPushButton" name="previousPageButton">
           <property name="text">
-           <string>Anterior</string>
+           <string>Previous</string>
           </property>
          </widget>
         </item>
@@ -306,7 +306,7 @@ QLabel{
         <item row="2" column="2">
          <widget class="QPushButton" name="selectVideoButton">
           <property name="text">
-           <string>Seleccionar Video</string>
+           <string>Select Video</string>
           </property>
          </widget>
         </item>
@@ -470,7 +470,7 @@ QLabel{
         <item row="12" column="17" colspan="3">
          <widget class="QPushButton" name="nextPageButton">
           <property name="text">
-           <string>Siguiente</string>
+           <string>Next</string>
           </property>
          </widget>
         </item>
@@ -624,7 +624,7 @@ QLabel{
 background-color: #00ff00;</string>
           </property>
           <property name="text">
-           <string>Reproducir</string>
+           <string>Play</string>
           </property>
          </widget>
         </item>
@@ -743,7 +743,7 @@ background-color: #00ff00;</string>
               <string notr="true">border: none;</string>
              </property>
              <property name="text">
-              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:28pt;&quot;&gt;Vocales Y Frases&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:28pt;&quot;&gt;Vowels And Phrases&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
              </property>
             </widget>
            </item>

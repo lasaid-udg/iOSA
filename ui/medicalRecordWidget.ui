@@ -118,7 +118,7 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
         <property name="geometry">
          <rect>
           <x>0</x>
-          <y>0</y>
+          <y>-3043</y>
           <width>1135</width>
           <height>3718</height>
          </rect>
@@ -387,7 +387,7 @@ QLabel {
                    <item row="1" column="0">
                     <widget class="QLabel" name="FVClitrosLabel">
                      <property name="text">
-                      <string>FVC Litros</string>
+                      <string>FVC Liters</string>
                      </property>
                     </widget>
                    </item>
@@ -421,7 +421,7 @@ QLabel {
                    <item row="3" column="0">
                     <widget class="QLabel" name="FEV1litrosLabel">
                      <property name="text">
-                      <string>FEV1 Litros</string>
+                      <string>FEV1 Liters</string>
                      </property>
                     </widget>
                    </item>
@@ -473,67 +473,12 @@ QLabel {
                 <layout class="QVBoxLayout" name="verticalLayout_61">
                  <item>
                   <layout class="QGridLayout" name="gridLayout_49">
-                   <item row="1" column="1">
-                    <widget class="QSpinBox" name="heartRateSpinBox">
-                     <property name="minimum">
-                      <number>40</number>
-                     </property>
-                     <property name="maximum">
-                      <number>300</number>
-                     </property>
-                     <property name="value">
-                      <number>70</number>
+                   <item row="1" column="0">
+                    <widget class="QLabel" name="cardiacFrequencyLabel">
+                     <property name="text">
+                      <string>Heart Rate</string>
                      </property>
                     </widget>
-                   </item>
-                   <item row="4" column="0" colspan="6">
-                    <spacer name="horizontalSpacer_104">
-                     <property name="orientation">
-                      <enum>Qt::Horizontal</enum>
-                     </property>
-                     <property name="sizeHint" stdset="0">
-                      <size>
-                       <width>40</width>
-                       <height>20</height>
-                      </size>
-                     </property>
-                    </spacer>
-                   </item>
-                   <item row="2" column="1">
-                    <widget class="QSpinBox" name="respiratoryFrequencySpinBox">
-                     <property name="maximum">
-                      <number>200</number>
-                     </property>
-                     <property name="value">
-                      <number>20</number>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="0" column="5">
-                    <spacer name="horizontalSpacer_105">
-                     <property name="orientation">
-                      <enum>Qt::Horizontal</enum>
-                     </property>
-                     <property name="sizeHint" stdset="0">
-                      <size>
-                       <width>40</width>
-                       <height>20</height>
-                      </size>
-                     </property>
-                    </spacer>
-                   </item>
-                   <item row="0" column="2">
-                    <spacer name="horizontalSpacer_106">
-                     <property name="orientation">
-                      <enum>Qt::Horizontal</enum>
-                     </property>
-                     <property name="sizeHint" stdset="0">
-                      <size>
-                       <width>40</width>
-                       <height>20</height>
-                      </size>
-                     </property>
-                    </spacer>
                    </item>
                    <item row="2" column="5">
                     <widget class="QSpinBox" name="diastolic_blood_pressure_spin_box">
@@ -542,70 +487,6 @@ QLabel {
                      </property>
                      <property name="value">
                       <number>80</number>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="1" column="0">
-                    <widget class="QLabel" name="cardiacFrequencyLabel">
-                     <property name="text">
-                      <string>Frecuencia Cardiaca</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="1" column="5">
-                    <widget class="QSpinBox" name="systolic_blood_pressure_spin_box">
-                     <property name="maximum">
-                      <number>360</number>
-                     </property>
-                     <property name="value">
-                      <number>120</number>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="3" column="0">
-                    <widget class="QLabel" name="oxigenSaturationLabel">
-                     <property name="text">
-                      <string>Saturación de Oxigeno</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="0" column="4">
-                    <spacer name="horizontalSpacer_107">
-                     <property name="orientation">
-                      <enum>Qt::Horizontal</enum>
-                     </property>
-                     <property name="sizeHint" stdset="0">
-                      <size>
-                       <width>40</width>
-                       <height>20</height>
-                      </size>
-                     </property>
-                    </spacer>
-                   </item>
-                   <item row="3" column="4">
-                    <widget class="QLabel" name="temperatureLabel">
-                     <property name="text">
-                      <string>Temperatura</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="0" column="0">
-                    <spacer name="horizontalSpacer_108">
-                     <property name="orientation">
-                      <enum>Qt::Horizontal</enum>
-                     </property>
-                     <property name="sizeHint" stdset="0">
-                      <size>
-                       <width>40</width>
-                       <height>20</height>
-                      </size>
-                     </property>
-                    </spacer>
-                   </item>
-                   <item row="2" column="0">
-                    <widget class="QLabel" name="respiratoryFrequencyLabel">
-                     <property name="text">
-                      <string>Frecuencia Respiratoria</string>
                      </property>
                     </widget>
                    </item>
@@ -622,15 +503,140 @@ QLabel {
                      </property>
                     </spacer>
                    </item>
-                   <item row="1" column="4" rowspan="2">
-                    <widget class="QLabel" name="arterialTensionLabel">
-                     <property name="text">
-                      <string>Presión Arterial</string>
+                   <item row="0" column="1">
+                    <spacer name="horizontalSpacer_110">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>40</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                   <item row="1" column="1">
+                    <widget class="QSpinBox" name="heartRateSpinBox">
+                     <property name="minimum">
+                      <number>40</number>
+                     </property>
+                     <property name="maximum">
+                      <number>300</number>
+                     </property>
+                     <property name="value">
+                      <number>70</number>
                      </property>
                     </widget>
                    </item>
-                   <item row="0" column="1">
-                    <spacer name="horizontalSpacer_110">
+                   <item row="2" column="0">
+                    <widget class="QLabel" name="respiratoryFrequencyLabel">
+                     <property name="text">
+                      <string>Respiratory Rate</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="1" column="4" rowspan="2">
+                    <widget class="QLabel" name="arterialTensionLabel">
+                     <property name="text">
+                      <string>Blood pressure</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="3" column="4">
+                    <widget class="QLabel" name="temperatureLabel">
+                     <property name="text">
+                      <string>Temperature</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="4" column="0" colspan="6">
+                    <spacer name="horizontalSpacer_104">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>40</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                   <item row="0" column="5">
+                    <spacer name="horizontalSpacer_105">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>40</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                   <item row="3" column="5">
+                    <widget class="QDoubleSpinBox" name="temperatureDoubleSpinBox">
+                     <property name="decimals">
+                      <number>1</number>
+                     </property>
+                     <property name="minimum">
+                      <double>20.000000000000000</double>
+                     </property>
+                     <property name="maximum">
+                      <double>43.000000000000000</double>
+                     </property>
+                     <property name="singleStep">
+                      <double>0.100000000000000</double>
+                     </property>
+                     <property name="value">
+                      <double>36.500000000000000</double>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="2">
+                    <spacer name="horizontalSpacer_106">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>40</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                   <item row="3" column="0">
+                    <widget class="QLabel" name="oxigenSaturationLabel">
+                     <property name="text">
+                      <string>Oxigen Saturation</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="2" column="1">
+                    <widget class="QSpinBox" name="respiratoryFrequencySpinBox">
+                     <property name="maximum">
+                      <number>200</number>
+                     </property>
+                     <property name="value">
+                      <number>20</number>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="1" column="5">
+                    <widget class="QSpinBox" name="systolic_blood_pressure_spin_box">
+                     <property name="maximum">
+                      <number>360</number>
+                     </property>
+                     <property name="value">
+                      <number>120</number>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="4">
+                    <spacer name="horizontalSpacer_107">
                      <property name="orientation">
                       <enum>Qt::Horizontal</enum>
                      </property>
@@ -655,24 +661,18 @@ QLabel {
                      </property>
                     </widget>
                    </item>
-                   <item row="3" column="5">
-                    <widget class="QDoubleSpinBox" name="temperatureDoubleSpinBox">
-                     <property name="decimals">
-                      <number>1</number>
+                   <item row="0" column="0">
+                    <spacer name="horizontalSpacer_108">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
                      </property>
-                     <property name="minimum">
-                      <double>20.000000000000000</double>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>40</width>
+                       <height>20</height>
+                      </size>
                      </property>
-                     <property name="maximum">
-                      <double>43.000000000000000</double>
-                     </property>
-                     <property name="singleStep">
-                      <double>0.100000000000000</double>
-                     </property>
-                     <property name="value">
-                      <double>36.500000000000000</double>
-                     </property>
-                    </widget>
+                    </spacer>
                    </item>
                   </layout>
                  </item>
@@ -715,7 +715,7 @@ QLabel {
                    <item row="0" column="7">
                     <widget class="QLabel" name="BMILabel">
                      <property name="text">
-                      <string>IMC</string>
+                      <string>BMI</string>
                      </property>
                     </widget>
                    </item>
@@ -735,8 +735,8 @@ QLabel {
                    <item row="0" column="4">
                     <widget class="QLabel" name="neckCircumferenceLabel">
                      <property name="text">
-                      <string>Circuenferancia
-Del Cuello (CM)</string>
+                      <string>Neck
+Circunference (Cm)</string>
                      </property>
                     </widget>
                    </item>
@@ -782,14 +782,14 @@ Del Cuello (CM)</string>
                    <item row="0" column="2">
                     <widget class="QLabel" name="heightLabel">
                      <property name="text">
-                      <string>Estatura (M)</string>
+                      <string>Height (M)</string>
                      </property>
                     </widget>
                    </item>
                    <item row="0" column="0">
                     <widget class="QLabel" name="weightLabel">
                      <property name="text">
-                      <string>Peso (KG)</string>
+                      <string>Weight (Kg)</string>
                      </property>
                     </widget>
                    </item>
@@ -1325,7 +1325,7 @@ QLabel {
                    <item row="1" column="0">
                     <widget class="QLabel" name="scaleEpworthLabel">
                      <property name="text">
-                      <string>Escala Epworth</string>
+                      <string>Epworth scale</string>
                      </property>
                     </widget>
                    </item>
@@ -1375,7 +1375,7 @@ QLabel {
                    <item row="1" column="5" colspan="2" alignment="Qt::AlignRight">
                     <widget class="QLabel" name="scaleMallampatiLabel">
                      <property name="text">
-                      <string>Escala Mallampati (Clase)</string>
+                      <string>Mallampati Scale (Class)</string>
                      </property>
                     </widget>
                    </item>
@@ -1480,7 +1480,7 @@ QSlider::handle:horizontal {
                    <item row="0" column="0" colspan="2" alignment="Qt::AlignHCenter">
                     <widget class="QLabel" name="spirometryLabel">
                      <property name="text">
-                      <string>Espirometría</string>
+                      <string>Spirometry</string>
                      </property>
                     </widget>
                    </item>
@@ -1518,7 +1518,7 @@ QSlider::handle:horizontal {
                         <item row="1" column="1" alignment="Qt::AlignRight">
                          <widget class="QLabel" name="VIHYeslabel_4">
                           <property name="text">
-                           <string>   SI  </string>
+                           <string>YES</string>
                           </property>
                          </widget>
                         </item>
@@ -1658,7 +1658,7 @@ QSlider::handle:horizontal {
                  <item alignment="Qt::AlignHCenter">
                   <widget class="QLabel" name="historyTitleLabel">
                    <property name="text">
-                    <string>Historial</string>
+                    <string>Patient Record</string>
                    </property>
                   </widget>
                  </item>
@@ -1693,7 +1693,7 @@ QSlider::handle:horizontal {
                  <item row="0" column="0" alignment="Qt::AlignHCenter">
                   <widget class="QLabel" name="vitalSignsTitleLabel">
                    <property name="text">
-                    <string>Signos Vitales</string>
+                    <string>Vital Signs</string>
                    </property>
                   </widget>
                  </item>
@@ -1723,7 +1723,7 @@ QLabel {
                    <item row="2" column="1">
                     <widget class="QLabel" name="smokerLabel">
                      <property name="text">
-                      <string>Tabaquismo</string>
+                      <string>Smoker</string>
                      </property>
                     </widget>
                    </item>
@@ -1743,7 +1743,7 @@ QLabel {
                    <item row="4" column="1">
                     <widget class="QLabel" name="hypertensionLabel">
                      <property name="text">
-                      <string>Hipertensión</string>
+                      <string>Hypertension</string>
                      </property>
                     </widget>
                    </item>
@@ -1876,7 +1876,7 @@ QSlider::handle:horizontal {
                    <item row="1" column="1">
                     <widget class="QLabel" name="oxigenUseLabel">
                      <property name="text">
-                      <string>Uso de Oxigeno</string>
+                      <string>Oxygen Use</string>
                      </property>
                     </widget>
                    </item>
@@ -1972,7 +1972,7 @@ QSlider::handle:horizontal {
                    <item row="3" column="1">
                     <widget class="QLabel" name="exsomkerLabel">
                      <property name="text">
-                      <string>Exfumador</string>
+                      <string>Exsmoker</string>
                      </property>
                     </widget>
                    </item>
@@ -2081,7 +2081,7 @@ QSlider::handle:horizontal {
                    <item row="1" column="4">
                     <widget class="QLabel" name="snoringLabel">
                      <property name="text">
-                      <string>Ronquidos</string>
+                      <string>Snoring</string>
                      </property>
                     </widget>
                    </item>
@@ -2151,7 +2151,7 @@ QSlider::handle:horizontal {
                    <item row="2" column="4">
                     <widget class="QLabel" name="witnessedApneasLabel">
                      <property name="text">
-                      <string>Apneas Presenciadas</string>
+                      <string>Witnessed Apneas</string>
                      </property>
                     </widget>
                    </item>
@@ -2221,7 +2221,7 @@ QSlider::handle:horizontal {
                    <item row="3" column="4">
                     <widget class="QLabel" name="chronicFatigueLabel">
                      <property name="text">
-                      <string>Fatiga Crónica</string>
+                      <string>Chronic Fatigue</string>
                      </property>
                     </widget>
                    </item>
@@ -2296,7 +2296,7 @@ QSlider::handle:horizontal {
 }</string>
                      </property>
                      <property name="placeholderText">
-                      <string>Medicamentos</string>
+                      <string>Medicines</string>
                      </property>
                     </widget>
                    </item>
@@ -2311,7 +2311,7 @@ QSlider::handle:horizontal {
 }</string>
                      </property>
                      <property name="text">
-                      <string>Medicamentos</string>
+                      <string>Medicines</string>
                      </property>
                     </widget>
                    </item>
@@ -2351,7 +2351,7 @@ QSlider::handle:horizontal {
                    <item row="0" column="0" colspan="2" alignment="Qt::AlignHCenter">
                     <widget class="QLabel" name="diagnosticAssistantsTitleLabel">
                      <property name="text">
-                      <string>Auxiliares de Diagnóstico</string>
+                      <string>Diagnostic Aids</string>
                      </property>
                     </widget>
                    </item>
@@ -2373,7 +2373,7 @@ QSlider::handle:horizontal {
                      <item row="1" column="1" alignment="Qt::AlignRight">
                       <widget class="QLabel" name="VIHYeslabel_2">
                        <property name="text">
-                        <string>   SI  </string>
+                        <string>YES</string>
                        </property>
                       </widget>
                      </item>
@@ -2463,7 +2463,7 @@ QSlider::handle:horizontal {
                      <item row="1" column="1" alignment="Qt::AlignRight">
                       <widget class="QLabel" name="VIHYeslabel_3">
                        <property name="text">
-                        <string>   SI  </string>
+                        <string>YES</string>
                        </property>
                       </widget>
                      </item>
@@ -2479,7 +2479,7 @@ QSlider::handle:horizontal {
                    <item row="0" column="0" colspan="2" alignment="Qt::AlignHCenter">
                     <widget class="QLabel" name="bloodGasesTitleLabel">
                      <property name="text">
-                      <string>Gasometría Arterial</string>
+                      <string>Arterial Gasometry</string>
                      </property>
                     </widget>
                    </item>
@@ -2550,7 +2550,7 @@ QLabel {
                    <item row="1" column="0" colspan="2">
                     <widget class="QLabel" name="cardiacInsufficiencyLabel">
                      <property name="text">
-                      <string>Insuficiencia Cardiaca</string>
+                      <string>Cardiac Insufficiency</string>
                      </property>
                     </widget>
                    </item>
@@ -2570,14 +2570,14 @@ QLabel {
                    <item row="2" column="0" colspan="2">
                     <widget class="QLabel" name="historyCerebralVascularAccidentLabel">
                      <property name="text">
-                      <string>Antecedente de accidente cerebro vascular</string>
+                      <string>Historyc Cerebral Vascular Accident</string>
                      </property>
                     </widget>
                    </item>
                    <item row="11" column="0" colspan="2">
                     <widget class="QLabel" name="renalDiseaseLabel">
                      <property name="text">
-                      <string>Afección renal</string>
+                      <string>Renal Disease</string>
                      </property>
                     </widget>
                    </item>
@@ -2628,7 +2628,7 @@ QSlider::handle:horizontal {
                         <item row="1" column="1" alignment="Qt::AlignRight">
                          <widget class="QLabel" name="peripherialVascularDiseaseYesLabel">
                           <property name="text">
-                           <string>   SI  </string>
+                           <string>YES</string>
                           </property>
                          </widget>
                         </item>
@@ -2647,15 +2647,14 @@ QSlider::handle:horizontal {
                    <item row="5" column="0" colspan="2">
                     <widget class="QLabel" name="EPOCLabel">
                      <property name="text">
-                      <string>Enfermedad Pulmonar Obstructiva Crónica
-(EPOC)</string>
+                      <string>Chronic Obstructive Pulmonary Disease</string>
                      </property>
                     </widget>
                    </item>
                    <item row="3" column="0" colspan="2">
                     <widget class="QLabel" name="peripherialVascularDiseaseLabel">
                      <property name="text">
-                      <string>Enfermedad vascular periferica</string>
+                      <string>Peripherial Vascular Disease</string>
                      </property>
                     </widget>
                    </item>
@@ -2675,14 +2674,14 @@ QSlider::handle:horizontal {
                    <item row="7" column="0" colspan="2">
                     <widget class="QLabel" name="liverDiseaseLabel">
                      <property name="text">
-                      <string>Enfermedad Hepática</string>
+                      <string>Liver Disease</string>
                      </property>
                     </widget>
                    </item>
                    <item row="13" column="0" colspan="2">
                     <widget class="QLabel" name="leukemiaLabel">
                      <property name="text">
-                      <string>Leucemia</string>
+                      <string>Leukemia</string>
                      </property>
                     </widget>
                    </item>
@@ -2733,7 +2732,7 @@ QSlider::handle:horizontal {
                         <item row="1" column="1" alignment="Qt::AlignRight">
                          <widget class="QLabel" name="connectiveTissueDiseaseYesLabel">
                           <property name="text">
-                           <string>   SI  </string>
+                           <string>YES</string>
                           </property>
                          </widget>
                         </item>
@@ -2752,7 +2751,7 @@ QSlider::handle:horizontal {
                    <item row="12" column="0" colspan="2">
                     <widget class="QLabel" name="solidTumorLabel">
                      <property name="text">
-                      <string>Tumor Sólido</string>
+                      <string>Solid Tumor</string>
                      </property>
                     </widget>
                    </item>
@@ -2886,7 +2885,7 @@ QSlider::handle:horizontal {
                         <item row="1" column="1" alignment="Qt::AlignRight">
                          <widget class="QLabel" name="leukemiaYesLabel">
                           <property name="text">
-                           <string>   SI  </string>
+                           <string>YES</string>
                           </property>
                          </widget>
                         </item>
@@ -2905,14 +2904,14 @@ QSlider::handle:horizontal {
                    <item row="4" column="0" colspan="2">
                     <widget class="QLabel" name="dementiaLabel">
                      <property name="text">
-                      <string>Demencia</string>
+                      <string>Dementia</string>
                      </property>
                     </widget>
                    </item>
                    <item row="14" column="0" colspan="2">
                     <widget class="QLabel" name="lymphomaLabel">
                      <property name="text">
-                      <string>Linfoma</string>
+                      <string>Lymphoma</string>
                      </property>
                     </widget>
                    </item>
@@ -2963,7 +2962,7 @@ QSlider::handle:horizontal {
                         <item row="1" column="1" alignment="Qt::AlignRight">
                          <widget class="QLabel" name="dementiaYesLabel">
                           <property name="text">
-                           <string>   SI  </string>
+                           <string>YES</string>
                           </property>
                          </widget>
                         </item>
@@ -3026,7 +3025,7 @@ QSlider::handle:horizontal {
                         <item row="1" column="1" alignment="Qt::AlignRight">
                          <widget class="QLabel" name="EPOCYesLabel">
                           <property name="text">
-                           <string>   SI  </string>
+                           <string>YES</string>
                           </property>
                          </widget>
                         </item>
@@ -3055,14 +3054,14 @@ QSlider::handle:horizontal {
                    <item row="6" column="0" colspan="2">
                     <widget class="QLabel" name="connectiveTissueDiseaseLabel">
                      <property name="text">
-                      <string>Enfermedad de tejido conectivo</string>
+                      <string>Connective Tissue Disease</string>
                      </property>
                     </widget>
                    </item>
                    <item row="15" column="0" colspan="2">
                     <widget class="QLabel" name="VIHLabel">
                      <property name="text">
-                      <string>VIH </string>
+                      <string>Human Immunodeficiency Virus</string>
                      </property>
                     </widget>
                    </item>
@@ -3139,7 +3138,7 @@ QSlider::handle:horizontal {
                         <item row="1" column="1" alignment="Qt::AlignRight">
                          <widget class="QLabel" name="liverDiseaseYesLabel">
                           <property name="text">
-                           <string>   SI  </string>
+                           <string>YES</string>
                           </property>
                          </widget>
                         </item>
@@ -3209,7 +3208,7 @@ QSlider::handle:horizontal {
                         <item row="1" column="1" alignment="Qt::AlignRight">
                          <widget class="QLabel" name="historyCerebralVascularAccidentYesLabel">
                           <property name="text">
-                           <string>   SI  </string>
+                           <string>YES</string>
                           </property>
                          </widget>
                         </item>
@@ -3252,14 +3251,14 @@ QSlider::handle:horizontal {
                         <item row="1" column="0">
                          <widget class="QLabel" name="cardiacInsufficiencyNoLabel">
                           <property name="text">
-                           <string>  NO  </string>
+                           <string>NO</string>
                           </property>
                          </widget>
                         </item>
                         <item row="1" column="1" alignment="Qt::AlignRight">
                          <widget class="QLabel" name="cardiacInsufficiencyYesLabel">
                           <property name="text">
-                           <string>   SI  </string>
+                           <string>YES</string>
                           </property>
                          </widget>
                         </item>
@@ -3328,7 +3327,7 @@ QSlider::handle:horizontal {
                         <item row="1" column="1" alignment="Qt::AlignRight">
                          <widget class="QLabel" name="lymphomaYesLabel">
                           <property name="text">
-                           <string>   SI  </string>
+                           <string>YES</string>
                           </property>
                          </widget>
                         </item>
@@ -3382,8 +3381,8 @@ QLabel {
                         <item row="1" column="1" alignment="Qt::AlignHCenter">
                          <widget class="QLabel" name="diabetesMilitusNoComplicatedLabel">
                           <property name="text">
-                           <string>      No
-Complicado</string>
+                           <string>Not
+Complicated</string>
                           </property>
                          </widget>
                         </item>
@@ -3391,16 +3390,16 @@ Complicado</string>
                          <widget class="QLabel" name="diabetesMilitusNoLabel">
                           <property name="text">
                            <string>     No /
-Controlado</string>
+Controlled</string>
                           </property>
                          </widget>
                         </item>
                         <item row="1" column="2" alignment="Qt::AlignRight">
                          <widget class="QLabel" name="diabetesMilitusYesLabel">
                           <property name="text">
-                           <string>Daño a
-Organo
-Blanco</string>
+                           <string>Damage to
+White
+Organ</string>
                           </property>
                          </widget>
                         </item>
@@ -3489,7 +3488,7 @@ QSlider::handle:horizontal {
                         <item row="1" column="1" alignment="Qt::AlignRight">
                          <widget class="QLabel" name="VIHYeslabel">
                           <property name="text">
-                           <string>   SI  </string>
+                           <string>YES</string>
                           </property>
                          </widget>
                         </item>
@@ -3508,7 +3507,7 @@ QSlider::handle:horizontal {
                    <item row="8" column="0" rowspan="2" colspan="2">
                     <widget class="QLabel" name="diabetesMilitusLabel">
                      <property name="text">
-                      <string>Diabetes mellitus</string>
+                      <string>Diabetes Mellitus</string>
                      </property>
                     </widget>
                    </item>
@@ -3546,7 +3545,7 @@ QSlider::handle:horizontal {
                         <item row="1" column="1" alignment="Qt::AlignRight">
                          <widget class="QLabel" name="renalDiseaseYesLabel">
                           <property name="text">
-                           <string>SI  </string>
+                           <string>YES</string>
                           </property>
                          </widget>
                         </item>
@@ -3622,7 +3621,7 @@ QSlider::handle:horizontal {
                         <item row="1" column="1" alignment="Qt::AlignRight">
                          <widget class="QLabel" name="hemiplegiaYesLabel">
                           <property name="text">
-                           <string>   SI  </string>
+                           <string>YES</string>
                           </property>
                          </widget>
                         </item>
@@ -3641,7 +3640,7 @@ QSlider::handle:horizontal {
                    <item row="10" column="0" colspan="2">
                     <widget class="QLabel" name="hemiplegiaLabel">
                      <property name="text">
-                      <string>Hemiplejia</string>
+                      <string>Hemiplegia</string>
                      </property>
                     </widget>
                    </item>
@@ -3665,7 +3664,7 @@ QSlider::handle:horizontal {
                  <item alignment="Qt::AlignHCenter">
                   <widget class="QLabel" name="comorbilityCharlsonTitleLabel">
                    <property name="text">
-                    <string>Comorbilidad de Charlson</string>
+                    <string>Charlson Comorbidity</string>
                    </property>
                   </widget>
                  </item>
@@ -3700,7 +3699,7 @@ QSlider::handle:horizontal {
                  <item alignment="Qt::AlignHCenter">
                   <widget class="QLabel" name="weightHeightIMCTitleLabel">
                    <property name="text">
-                    <string>Peso, Estatura e IMC</string>
+                    <string>Weight, Height and BMI</string>
                    </property>
                   </widget>
                  </item>
@@ -3792,7 +3791,7 @@ QLabel {
                  <item>
                   <widget class="QLabel" name="titleRegistryLabel">
                    <property name="text">
-                    <string>Registro Médico</string>
+                    <string>Medical Record</string>
                    </property>
                   </widget>
                  </item>
@@ -3841,7 +3840,7 @@ QLabel {
               <item row="50" column="9" colspan="2">
                <widget class="QPushButton" name="nextPageButton">
                 <property name="text">
-                 <string>Siguiente</string>
+                 <string>Next</string>
                 </property>
                </widget>
               </item>

@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>inSAsy - Detalles</string>
+   <string>iOSA - Image Details</string>
   </property>
   <property name="styleSheet">
    <string notr="true">QWidget {
@@ -214,7 +214,7 @@ QLabel{
            <bool>true</bool>
           </property>
           <property name="plainText">
-           <string>--------------------------------------------------- DETALLES ---------------------------------------------------
+           <string>--------------------------------------------------- DETAILS ---------------------------------------------------
 
 </string>
           </property>

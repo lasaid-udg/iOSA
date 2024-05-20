@@ -406,7 +406,7 @@ QLineEdit:hover {
                  <item row="16" column="1" colspan="2">
                   <widget class="QLabel" name="minorDesaturation">
                    <property name="text">
-                    <string>Desaturación menor:</string>
+                    <string>Minor Desaturation:</string>
                    </property>
                   </widget>
                  </item>
@@ -478,7 +478,7 @@ QLineEdit:hover {
                  <item row="28" column="4">
                   <widget class="QLabel" name="defaultDesaturation">
                    <property name="text">
-                    <string>Dasaturación:</string>
+                    <string>Dasaturation:</string>
                    </property>
                   </widget>
                  </item>
@@ -518,7 +518,7 @@ QLineEdit:hover {
                  <item row="27" column="6">
                   <widget class="QLabel" name="defaultHypopnea">
                    <property name="text">
-                    <string>Hipoapnea:</string>
+                    <string>Hypopnea:</string>
                    </property>
                   </widget>
                  </item>
@@ -578,7 +578,7 @@ QLineEdit:hover {
                  <item row="20" column="6" rowspan="2" colspan="2">
                   <widget class="QLabel" name="saturation80">
                    <property name="text">
-                    <string>Saturación &lt;= 80% :</string>
+                    <string>Saturation &lt;= 80% :</string>
                    </property>
                   </widget>
                  </item>
@@ -611,7 +611,7 @@ QLineEdit:hover {
                  <item row="23" column="6" colspan="2">
                   <widget class="QLabel" name="label">
                    <property name="text">
-                    <string>Periodo de evaluación de flujo:</string>
+                    <string>Flow Evaluation Period:</string>
                    </property>
                   </widget>
                  </item>
@@ -691,7 +691,7 @@ QLineEdit:hover {
                  <item row="13" column="6" colspan="2">
                   <widget class="QLabel" name="snoringEvents">
                    <property name="text">
-                    <string>Eventos de ronquidos:</string>
+                    <string>Snoring Events:</string>
                    </property>
                   </widget>
                  </item>
@@ -731,7 +731,7 @@ QLineEdit:hover {
                  <item row="16" column="6" rowspan="2" colspan="2">
                   <widget class="QLabel" name="saturation90Num">
                    <property name="text">
-                    <string>Saturación &lt;= 90%:</string>
+                    <string>Saturation &lt;= 90%:</string>
                    </property>
                   </widget>
                  </item>
@@ -777,7 +777,7 @@ QLineEdit:hover {
                  <item row="29" column="1" colspan="4">
                   <widget class="QLabel" name="commentsLabel">
                    <property name="text">
-                    <string>Comentarios:</string>
+                    <string>Comments:</string>
                    </property>
                   </widget>
                  </item>
@@ -879,21 +879,21 @@ QLineEdit:hover {
                  <item row="22" column="1" colspan="2">
                   <widget class="QLabel" name="averagePulseRate">
                    <property name="text">
-                    <string>Frecuencia de pulso promedio:</string>
+                    <string>Average Pulse Rate:</string>
                    </property>
                   </widget>
                  </item>
                  <item row="12" column="1" colspan="2">
                   <widget class="QLabel" name="lrPercentage">
                    <property name="text">
-                    <string>%Lim. Flujo Res con ron (LR):</string>
+                    <string>%Lim. Flux Res con ron (LR):</string>
                    </property>
                   </widget>
                  </item>
                  <item row="15" column="6" colspan="2">
                   <widget class="QLabel" name="desaturationsNumber">
                    <property name="text">
-                    <string>N.º de desaturaciones:</string>
+                    <string>Number of desaturations:</string>
                    </property>
                   </widget>
                  </item>
@@ -926,7 +926,7 @@ QLineEdit:hover {
                  <item row="18" column="6" rowspan="2" colspan="2">
                   <widget class="QLabel" name="saturation85">
                    <property name="text">
-                    <string>Saturación &lt;= 85% :</string>
+                    <string>Saturation &lt;= 85% :</string>
                    </property>
                   </widget>
                  </item>
@@ -973,7 +973,7 @@ QLineEdit:hover {
                  <item row="15" column="1" colspan="2">
                   <widget class="QLabel" name="averageSaturation">
                    <property name="text">
-                    <string>Saturación promedio:</string>
+                    <string>Average Saturation:</string>
                    </property>
                   </widget>
                  </item>
@@ -1053,8 +1053,8 @@ QLineEdit:hover {
                  <item row="14" column="1" colspan="2">
                   <widget class="QLabel" name="IDO">
                    <property name="text">
-                    <string>IDO Índice de Desaturanión
-de Oxígeno*:</string>
+                    <string>DIO Desaturation Index
+deoxygen*:</string>
                    </property>
                   </widget>
                  </item>
@@ -1175,8 +1175,8 @@ de Oxígeno*:</string>
                  <item row="24" column="1" colspan="2">
                   <widget class="QLabel" name="CSR">
                    <property name="text">
-                    <string>Proporción de perisods CSR
-en el peridodo de análisis</string>
+                    <string>Proportion of CSR perisods
+in the analysis period</string>
                    </property>
                   </widget>
                  </item>
@@ -1222,14 +1222,14 @@ en el peridodo de análisis</string>
                  <item row="26" column="1" colspan="4">
                   <widget class="QLabel" name="label_22">
                    <property name="text">
-                    <string>Parámetros de análisi utilizados (Predeterminado)</string>
+                    <string>Used Analysis Parameters (Default)</string>
                    </property>
                   </widget>
                  </item>
                  <item row="11" column="1" colspan="2">
                   <widget class="QLabel" name="lfPercentage">
                    <property name="text">
-                    <string>%Lim. Flujo Res sin Ron (lf)</string>
+                    <string>%Lim. Flux Res sin Ron (lf)</string>
                    </property>
                   </widget>
                  </item>
@@ -1360,7 +1360,7 @@ en el peridodo de análisis</string>
                  <item row="12" column="6" colspan="2">
                   <widget class="QLabel" name="lr">
                    <property name="text">
-                    <string>Lim. flujo Res con Ron (LR):</string>
+                    <string>Lim. Flux Res con Ron (LR):</string>
                    </property>
                   </widget>
                  </item>
@@ -1419,7 +1419,7 @@ en el peridodo de análisis</string>
                  <item row="17" column="1" colspan="2">
                   <widget class="QLabel" name="lowestSaturation">
                    <property name="text">
-                    <string>Saturación más baja:</string>
+                    <string>Lowest Saturation:</string>
                    </property>
                   </widget>
                  </item>
@@ -1491,7 +1491,7 @@ en el peridodo de análisis</string>
                  <item row="11" column="6" colspan="2">
                   <widget class="QLabel" name="lf">
                    <property name="text">
-                    <string>Lim. Flujo Res sin Ron (Lf):</string>
+                    <string>Lim. Flux Res sin Ron (Lf):</string>
                    </property>
                   </widget>
                  </item>
@@ -1724,7 +1724,7 @@ en el peridodo de análisis</string>
                  <item row="18" column="1" colspan="2">
                   <widget class="QLabel" name="basalSaturation">
                    <property name="text">
-                    <string>Saturación basal:</string>
+                    <string>Basal Saturation:</string>
                    </property>
                   </widget>
                  </item>
@@ -1744,7 +1744,7 @@ en el peridodo de análisis</string>
                  <item row="20" column="1" colspan="2">
                   <widget class="QLabel" name="minimumPulseRate">
                    <property name="text">
-                    <string>Frecuencia de pulso mínima:</string>
+                    <string>Minimum Pulse Rate:</string>
                    </property>
                   </widget>
                  </item>
@@ -1921,14 +1921,14 @@ en el peridodo de análisis</string>
                  <item row="28" column="1">
                   <widget class="QLabel" name="defaultSnoring">
                    <property name="text">
-                    <string>Ronquido:</string>
+                    <string>Snore:</string>
                    </property>
                   </widget>
                  </item>
                  <item row="21" column="1" colspan="2">
                   <widget class="QLabel" name="maximumPulseRate">
                    <property name="text">
-                    <string>Frecuencia de pulso máxima:</string>
+                    <string>Maximum Pulse Rate:</string>
                    </property>
                   </widget>
                  </item>
@@ -2291,7 +2291,7 @@ en el peridodo de análisis</string>
 font-size: 30px;</string>
              </property>
              <property name="text">
-              <string>Polygraphy Result</string>
+              <string>Polygraphy Results</string>
              </property>
             </widget>
            </item>
