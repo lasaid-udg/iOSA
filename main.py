@@ -39,9 +39,17 @@ def discretization_test() -> None:
     dz.transaction_discretize()
 
 
+def add_user() -> None:
+    from add_new_user import AddNewUser
+
+    app = QApplication(sys.argv)
+    mw = AddNewUser()
+    sys.exit(app.exec_())
+
 
 if __name__ == '__main__':
-    main()
+    # main()
     # ia_window_test()
     # range_window_test()
     # discretization_test()
+    add_user()
