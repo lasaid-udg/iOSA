@@ -1,12 +1,15 @@
 from PyQt5 import uic
 from PyQt5.QtWidgets import QWidget
 from PyQt5.QtWidgets import QLineEdit, QPushButton
+from PyQt5.QtWidgets import QMessageBox
 
 import pathlib
 
 UI_PATH = "ui/newUserWidget.ui"
 
 EMPTY_FIELD = ''
+INVALID_FIELD_MSG_TITLE = "Invalid Field"
+INVALID_FIELD_MSG = "Invalid data input.\nPlease verify the input data."
 
 class AddNewUser(QWidget):
     def __init__(self):
@@ -40,6 +43,14 @@ class AddNewUser(QWidget):
         else:
             self.__green_highlight_field(self._password)
             self.__green_highlight_field(self._re_password)
+    
+    def __verify_matching_password(self) -> bool:
+        if self._password.text() == "" or \
+                self._re_password.text() == "" or \
+                    self._re_password.text() != self._password.text():
+            return False
+        else:
+            return True
 
     def __verify_existing_user(self) -> None:
         pass
@@ -56,9 +67,37 @@ class AddNewUser(QWidget):
 
     def __add_new_user(self) -> None:
         if self.__verify_empty_fields():
-            print("No empty fields")
+            if self.__verify_matching_password():
+                print("All good!!!")
         else:
-            print("Empty fields")
+            self.__highlight_empty_fields()
+            self.__invalid_field_msg()
+    
+    def __highlight_empty_fields(self) -> None:
+        if self._name.text() == EMPTY_FIELD:
+            self.__red_highlight_field(self._name)
+        else:
+            self.__green_highlight_field(self._name)
+
+        if self._surname.text() == EMPTY_FIELD:
+            self.__red_highlight_field(self._surname)
+        else:
+            self.__green_highlight_field(self._surname)
+                
+        if self._username.text() == EMPTY_FIELD:
+            self.__red_highlight_field(self._username)
+        else:
+            self.__green_highlight_field(self._username)
+                    
+        if self._password.text() == EMPTY_FIELD:
+            self.__red_highlight_field(self._password)
+        else:
+            self.__green_highlight_field(self._password)
+                        
+        if self._re_password.text() == EMPTY_FIELD:
+            self.__red_highlight_field(self._re_password)
+        else:
+            self.__green_highlight_field(self._re_password)
     
     def __red_highlight_field(self, field_name) -> None:
         red_highlight = """QLineEdit {
@@ -81,3 +120,9 @@ class AddNewUser(QWidget):
                         border-radius: 15px;
                     }"""
         field_name.setStyleSheet(green_highlight)
+
+    def __invalid_field_msg(self) -> None:
+        msg = QMessageBox()
+        msg.setWindowTitle(INVALID_FIELD_MSG_TITLE)
+        msg.setText(INVALID_FIELD_MSG)
+        msg.exec_()
