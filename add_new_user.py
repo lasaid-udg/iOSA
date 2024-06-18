@@ -14,6 +14,7 @@ class AddNewUser(QWidget):
 
         self.__load_ui_file(pathlib.Path(__file__).parent)
         self.__define_widgets()
+        self._password.textChanged[str].connect(self.__highlight_unmatching_password)
         self._re_password.textChanged[str].connect(self.__highlight_unmatching_password)
         self._add_user_button.clicked.connect(self.__add_new_user)
 
@@ -31,28 +32,14 @@ class AddNewUser(QWidget):
         self._add_user_button = self.findChild(QPushButton, "addUserPushButton")
     
     def __highlight_unmatching_password(self) -> None:
-        red_highlight = """QLineEdit {
-                        background-color: rgb(255, 255, 255);
-                        border-width: 2px;
-                        border-style: solid;
-                        border-color: none;
-                        border-bottom-color: rgb(235, 0, 0);
-                        border-radius: 15px;
-                    }"""
-        green_highlight = """QLineEdit {
-                        background-color: rgb(255, 255, 255);
-                        border-width: 2px;
-                        border-style: solid;
-                        border-color: none;
-                        border-bottom-color: rgb(0, 255, 8);
-                        border-radius: 15px;
-                    }"""
-        if self._re_password.text() != self._password.text():
-            self._re_password.setStyleSheet(red_highlight)
-            self._password.setStyleSheet(red_highlight)
+        if self._password.text() == "" or \
+                self._re_password.text() == "" or \
+                    self._re_password.text() != self._password.text():
+            self.__red_highlight_field(self._password)
+            self.__red_highlight_field(self._re_password)
         else:
-            self._re_password.setStyleSheet(green_highlight)
-            self._password.setStyleSheet(green_highlight)
+            self.__green_highlight_field(self._password)
+            self.__green_highlight_field(self._re_password)
 
     def __verify_existing_user(self) -> None:
         pass
@@ -72,3 +59,25 @@ class AddNewUser(QWidget):
             print("No empty fields")
         else:
             print("Empty fields")
+    
+    def __red_highlight_field(self, field_name) -> None:
+        red_highlight = """QLineEdit {
+                        background-color: rgb(255, 255, 255);
+                        border-width: 2px;
+                        border-style: solid;
+                        border-color: none;
+                        border-bottom-color: rgb(235, 0, 0);
+                        border-radius: 15px;
+                    }"""
+        field_name.setStyleSheet(red_highlight)
+    
+    def __green_highlight_field(self, field_name) -> None:
+        green_highlight = """QLineEdit {
+                        background-color: rgb(255, 255, 255);
+                        border-width: 2px;
+                        border-style: solid;
+                        border-color: none;
+                        border-bottom-color: rgb(0, 255, 8);
+                        border-radius: 15px;
+                    }"""
+        field_name.setStyleSheet(green_highlight)
