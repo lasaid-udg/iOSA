@@ -31,8 +31,6 @@ class AddNewUser(QWidget):
         self._re_password.textChanged[str].connect(self.__highlight_unmatching_password)
         self._add_user_button.clicked.connect(self.__add_new_user)
 
-        self.show()
-
     def __load_ui_file(self, path):
         uic.loadUi(path / UI_PATH, self)
 

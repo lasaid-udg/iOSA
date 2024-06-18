@@ -5,6 +5,7 @@ import sys
 import pathlib
 
 from mainWindow import MainWindow
+from add_new_user import AddNewUser
 from log import Log
 
 from doctor import Doctor
@@ -39,9 +40,15 @@ class LogInWindow(QMainWindow):
         self.username = self.findChild(QLineEdit, "username")
         self.password = self.findChild(QLineEdit, "password")
         self.loginButton = self.findChild(QPushButton, "loginButton")
+        self._sign_in_button = self.findChild(QPushButton, "signInButton")
         self.loginButton.clicked.connect(self.login)
+        self._sign_in_button.clicked.connect(self.__sign_in)
         self.username.returnPressed.connect(self.login)
         self.password.returnPressed.connect(self.login)
+    
+    def __sign_in(self) -> None:
+        self._sign_in_wn = AddNewUser()
+        self._sign_in_wn.show()
 
     def login(self) -> None:
         if (self.is_valid_user(self.username.text(), self.password.text())):
