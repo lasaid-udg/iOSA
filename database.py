@@ -59,6 +59,11 @@ class ControllDb:
         query = ("SELECT id_system_user, password FROM system_user WHERE username = %(user)s")
         self.cursor.execute(query, {'user': str(username)})
         return self.cursor.fetchone()
+    
+    def get_username(self, username) -> tuple:
+        query = ("SELECT username FROM system_user WHERE username = %(user)s")
+        self.cursor.execute(query, {"user": str(username)})
+        return self.cursor.fetchone()
 
     # query that retrieve the log in user full name
     def getDoctorName(self, id):
@@ -331,6 +336,14 @@ class ControllDb:
     # --------------------------------------------------
     # INSERTS
     # --------------------------------------------------
+
+    def insert_new_system_user(self, tuple_data: tuple) -> None:
+        # print(tuple_data)
+        query = ("INSERT INTO mydb.system_user (username, password, first_name, last_name, type_user) VALUES ('%s', '%s', '%s', '%s', %s)" %tuple_data)
+        # query += "VALUES ('%s', %s, '%s', '%s', %s)" %tuple_data
+        # query = "INSERT INTO mydb.system_user VALUES ('%s', '%s', '%s', '%s', %d)" %tuple_data
+        self.cursor.execute(query)
+        self.connection.commit()
 
     # query that add a new patient
     def insertIntoPatient(self, tuple_data):

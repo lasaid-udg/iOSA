@@ -174,11 +174,11 @@ class VideoConvert(QWidget):
 
     def change_play_button_style(self):
         self.play_button.setStyleSheet("background-color: #ff0000;border:none")
-        self.play_button.setText("Detener")
+        self.play_button.setText("Stop")
 
     def change_stop_button_style(self):
         self.play_button.setStyleSheet("background-color: #00ff00;border:none")
-        self.play_button.setText("Reproducir")
+        self.play_button.setText("Play")
 
     # -------------------- DATABASE --------------------
 

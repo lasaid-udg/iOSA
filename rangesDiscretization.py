@@ -26,7 +26,7 @@ MAX_VALUE_IDX = 1
 BLANK = ''
 VALID_NUMBER_RGX = r"(?:^|[^\d,.])\d*(?:[,.]\d+)?(?:$|[^\d,.])$"
 
-CLINIC_DATA_HEADER = ['Edad', 'Frecuencia cardiaca', 'Presión arterial sistólica', 'Presión arterial diastólica', 'Frecuencia respiratoria', 'Saturación de oxigeno', 'Temperatura', 'Talla', 'Circunferencia de cuello', 'Peso', 'Uso de oxigeno', 'Tabaquismo', 'Exfumador', 'Hipertención', 'Presencia de ronquido', 'Escala de Epworth', 'ET CO2', 'Escala de Mallampati', 'PH', 'pCO2', 'pO2', 'EB', 'FVC Litro', 'FVC%', 'FEV1 Litros', 'FEV1L%', 'FEV1L/FVCL', 'Ingesta de medicamentos', 'Infarto agudo al miocardio', 'Antecedente de accidente\ncerebrovascular', 'Enfermedad vascular periferica', 'Demencia', 'EPOC', 'Escala de Charlson']
+CLINIC_DATA_HEADER = ['Age', 'Heart rate', 'Systolic blood pressure', 'Diastolic blood pressure', 'Breathing frequency', 'Oxygen saturation', 'Temperature', 'Height', 'Neck circumference', 'Weight', 'Oxygen use', 'Smoking', 'Former smoker', 'Hypertension', 'Presence of snoring', 'Epworth scale', 'ET CO2', 'Mallampati scale', 'PH', 'pCO2', 'pO2', 'EB', 'FVC Litro', 'FVC%', 'FEV1 Litros', 'FEV1L%', 'FEV1L/FVCL', 'Medication intake', 'Acute myocardial infarction', 'History of cerebrovascular accident', 'Peripheral vascular disease', 'Dementia', 'EPOC', 'Charlson scale']
 PDF_HEADER = ['IAH', 'Promedio de respiraciones por minuto', 'Indice de Apneas', 'Apneas', 'ÍAI', 'Apneas indeterminadas', 'ÍAO', 'Apneas obstructivas', 'ÍAC', 'Apneas centrales', 'ÍAM', 'Apneas mixtas', 'Indice de hipopneas', 'Hipoapneas', 'Eventos de ronquidos', 'IDO', 'Saturación promedio', 'Saturación <90%', 'Desaturación menor', 'Saturación <85%', 'Saturación <80%', 'Saturación basal', 'Frecuencia de pulso promedio', 'Proporcion de periodo CSR\nen el periodo de análisis', 'Periodo de evaluación de flujo']
 MEASUREMENTS_HEADER = ['Ancho de cara', 'Ángulo Ancho de Cara', 'Ancho intercantal', 'Ancho Biocular', 'Ancho mandibular', 'Área triágulo maxilar', 'Ángulo Ancho de Mandibula', 'Ancho de Nariz', 'Àngulo Nasion Mandibular', 'Ángulo Sub-Nasion Mandibular', 'Ángulo ANB', 'Distancia Submental', 'Volumen Medio Fosa Craneal']
 
@@ -54,13 +54,13 @@ class RangeDiscretizationWidget(QWidget):
         self._discretizated_values = []
         self._discretizated_values_header = []
 
-        title_label.setText("Definición de Rangos")
+        title_label.setText("Definition of Ranges")
         title_label.setStyleSheet("font-size: 30px")
-        attribute_header_label.setText("Atributo")
+        attribute_header_label.setText("Attribute")
         attribute_header_label.setStyleSheet("font-size: 25px")
-        range_header_label.setText("Rango Personalizado")
+        range_header_label.setText("Custom Range")
         range_header_label.setStyleSheet("font-size: 25px")
-        default_range_header_label.setText("Rango Predetermindado")
+        default_range_header_label.setText("Default Range")
         default_range_header_label.setStyleSheet("font-size: 25px")
 
         self._main_grid.addWidget(title_label, 0,0,1,0, alignment=Qt.AlignCenter)
@@ -83,7 +83,7 @@ class RangeDiscretizationWidget(QWidget):
                 field_range = QLineEdit()
                 default_range_box = QCheckBox()
                 default_range_box.setChecked(True)
-                default_range_box.setText('Rango Predeterminado')
+                default_range_box.setText('Default Range')
                 field = (attribute_name, field_range, default_range_box)
                 
                 self._discretizated_values.append(field_range)

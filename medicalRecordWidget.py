@@ -37,7 +37,7 @@ class MedicalRecordForm(QWidget):
     def __defineWidgets(self):
         self.nextPageButton = self.findChild(QPushButton, "nextPageButton")
         # WORKAROUND
-        self.nextPageButton.setText("Guardar y Continuar")
+        self.nextPageButton.setText("Save and Continue")
 
         # Weight/Height/BMI
         self.patientweight = self.findChild(QLineEdit, "weightLineEdit")
