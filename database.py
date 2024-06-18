@@ -337,7 +337,13 @@ class ControllDb:
     # INSERTS
     # --------------------------------------------------
 
-    
+    def insert_new_system_user(self, tuple_data: tuple) -> None:
+        # print(tuple_data)
+        query = ("INSERT INTO mydb.system_user (username, password, first_name, last_name, type_user) VALUES ('%s', '%s', '%s', '%s', %s)" %tuple_data)
+        # query += "VALUES ('%s', %s, '%s', '%s', %s)" %tuple_data
+        # query = "INSERT INTO mydb.system_user VALUES ('%s', '%s', '%s', '%s', %d)" %tuple_data
+        self.cursor.execute(query)
+        self.connection.commit()
 
     # query that add a new patient
     def insertIntoPatient(self, tuple_data):

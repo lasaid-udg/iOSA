@@ -5,7 +5,7 @@ from PyQt5.QtWidgets import QMessageBox
 
 import pathlib
 
-from database import ControllDb, MultimediaDb, DatabaseThread, insert_db_thread_event
+from database import ControllDb, DatabaseThread, insert_db_thread_event
 
 UI_PATH = "ui/newUserWidget.ui"
 
@@ -16,6 +16,9 @@ UNMATCHING_PASSWORDS_MSG_TITLE = "Unmatching passwords"
 UNMATCHING_PASSWORDS_MSG = "The passwords do not match\nPlease verify them."
 EXISTING_USER_MSG_TITLE = "Existing User"
 EXISTING_USER_MSG = "The user already exist.\nPlease chose another."
+NEW_USER_ADDED_MSG_TITLE = "User Added"
+NEW_USER_ADDED_MSG = "New user added."
+USERT_TYPE = 0
 
 
 class AddNewUser(QWidget):
@@ -45,7 +48,9 @@ class AddNewUser(QWidget):
         if self.__verify_empty_fields():
             if self.__verify_matching_password():
                 if self.__verify_existing_user():
-                    print("All good!!!")
+                    self.__insert_new_user()
+                    self.__new_user_added_msg()
+                    self.__clear_fields()
                 else:
                     self.__existing_user_msg()
             else:
@@ -145,15 +150,47 @@ class AddNewUser(QWidget):
                     }"""
         field_name.setStyleSheet(green_highlight)
 
+    def __reset_highlight_field(self) -> None:
+        none_highlight = """QLineEdit {
+                        background-color: rgb(255, 255, 255);
+                        border-width: 2px;
+                        border-style: solid;
+                        border-color: none;
+                        border-bottom-color: rgb(192, 192, 192);
+                        border-radius: 15px;
+                    }"""
+        self._name.setStyleSheet(none_highlight)
+        self._surname.setStyleSheet(none_highlight)
+        self._username.setStyleSheet(none_highlight)
+        self._password.setStyleSheet(none_highlight)
+        self._re_password.setStyleSheet(none_highlight)
+
     def __insert_new_user(self) -> None:
         controll_db = ControllDb()
+        tuple_data = [
+            self._username.text(),
+            self._password.text(),
+            self._name.text(),
+            self._surname.text(),
+            0
+        ]
+
         db_thread = DatabaseThread(
-            target=controll_db.get_username,
-            args=(self._username.text(),)
+            target=controll_db.insert_new_system_user,
+            args=(tuple(tuple_data),)
         )
         db_thread.start()
         insert_db_thread_event(db_thread.native_id)
-        data = db_thread.join()
+        db_thread.join()
+    
+    def __clear_fields(self):
+        self._name.clear()
+        self._surname.clear()
+        self._username.clear()
+        self._password.clear()
+        self._re_password.clear()
+
+        self.__reset_highlight_field()
 
     def __invalid_field_msg(self) -> None:
         msg = QMessageBox()
@@ -171,4 +208,10 @@ class AddNewUser(QWidget):
         msg = QMessageBox()
         msg.setWindowTitle(EXISTING_USER_MSG_TITLE)
         msg.setText(EXISTING_USER_MSG)
+        msg.exec_()
+    
+    def __new_user_added_msg(self) -> None:
+        msg = QMessageBox()
+        msg.setWindowTitle(NEW_USER_ADDED_MSG_TITLE)
+        msg.setText(NEW_USER_ADDED_MSG)
         msg.exec_()
