@@ -52,16 +52,16 @@ class iaFiltersWidget(QWidget):
         self._weight_range_exclusive = QLineEdit()
         self._apply_filters_button = QPushButton()
 
-        title_label.setText("Selección de Filtros")
+        title_label.setText("Filter Selection")
         title_label.setStyleSheet("font-size: 30px")
-        gender_label.setText("Sexo")
-        self._male_radio_button.setText("Hombre")
-        self._female_radio_button.setText("Mujer")
-        self._both_radio_button.setText("Ambos")
-        iah_title_label.setText("Índice IAH")
-        age_title_label.setText("Edad")
-        weight_title_label.setText("Peso")
-        self._apply_filters_button.setText("Aplicar Filtros")
+        gender_label.setText("Sex")
+        self._male_radio_button.setText("Male")
+        self._female_radio_button.setText("Female")
+        self._both_radio_button.setText("Both")
+        iah_title_label.setText("IAH Index")
+        age_title_label.setText("Age")
+        weight_title_label.setText("Weight")
+        self._apply_filters_button.setText("Apply Filters")
 
         self._iah_range_inclusive.setText("0")
         self._iah_range_exclusive.setText("150")
@@ -79,17 +79,17 @@ class iaFiltersWidget(QWidget):
         
         self._main_grid.addWidget(iah_title_label, 3,0,1,0, alignment=Qt.AlignCenter)
         self._main_grid.addWidget(self._iah_range_inclusive, 4,0, alignment=Qt.AlignCenter)
-        self._main_grid.addWidget(QLabel(" de | a "), 4,1, alignment=Qt.AlignCenter)
+        self._main_grid.addWidget(QLabel(" from | to "), 4,1, alignment=Qt.AlignCenter)
         self._main_grid.addWidget(self._iah_range_exclusive, 4,2, alignment=Qt.AlignCenter)
 
         self._main_grid.addWidget(age_title_label, 5,0,1,0, alignment=Qt.AlignCenter)
         self._main_grid.addWidget(self._age_range_inclusive, 6,0, alignment=Qt.AlignCenter) 
-        self._main_grid.addWidget(QLabel(" de | a "), 6,1, alignment=Qt.AlignCenter)
+        self._main_grid.addWidget(QLabel(" from | to "), 6,1, alignment=Qt.AlignCenter)
         self._main_grid.addWidget(self._age_range_exclusive, 6,2, alignment=Qt.AlignCenter)
         
         self._main_grid.addWidget(weight_title_label, 7,0,1,0, alignment=Qt.AlignCenter)
         self._main_grid.addWidget(self._weight_range_inclusive, 8,0, alignment=Qt.AlignCenter)
-        self._main_grid.addWidget(QLabel(" de | a "), 8,1, alignment=Qt.AlignCenter)
+        self._main_grid.addWidget(QLabel(" from | to "), 8,1, alignment=Qt.AlignCenter)
         self._main_grid.addWidget(self._weight_range_exclusive, 8,2, alignment=Qt.AlignCenter)
         
         self._main_grid.addWidget(self._apply_filters_button, 9,0,2,0, alignment=Qt.AlignCenter)
@@ -159,8 +159,8 @@ class iaFiltersWidget(QWidget):
 
     def __invalid_input(self) -> None:
         msg = QMessageBox()
-        msg.setWindowTitle("Valor Inválido")
-        msg.setText("El valor ingresado no es válido.")
+        msg.setWindowTitle("Invalid Value")
+        msg.setText("The value entered is not valid.")
         msg.exec_()
 
 

@@ -141,8 +141,8 @@ class MainWindow(QMainWindow):
 
     def closeEvent(self, event):
         close_msg = QMessageBox.question(self,
-                                         'Salir del Sistema',
-                                         '¿Salir del Sistema?',
+                                         'Exit iOSA',
+                                         'Close the iOSA system?',
                                          QMessageBox.Yes | QMessageBox.No,
                                          QMessageBox.Yes)
 
