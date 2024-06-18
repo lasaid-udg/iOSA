@@ -47,9 +47,11 @@ def add_user() -> None:
     sys.exit(app.exec_())
 
 
+
+
 if __name__ == '__main__':
-    # main()
+    main()
     # ia_window_test()
     # range_window_test()
     # discretization_test()
-    add_user()
+    # add_user()
