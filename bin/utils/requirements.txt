@@ -1,0 +1,11 @@
+mediapipe==0.8.11
+mysql-connector-python==8.0.28
+PyQt5==5.15.6
+pandas==1.4.0
+pyzbar==0.1.8
+PyMuPDF==1.19.6
+pytesseract==0.3.9
+pydub==0.25.1
+openpyxl==3.1.2
+mlxtend==0.23.0
+pymongo==4.5.0

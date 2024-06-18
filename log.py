@@ -3,6 +3,7 @@ import traceback
 import pathlib
 
 LOG_PATH = pathlib.Path("bin/log.log")
+WINDOWS_CMD_LOG_PATH = pathlib.Path("log.log")
 FORMAT = "%(asctime)s %(levelname)s %(message)s"
 ENCODE = "utf-8"
 FILEMODE = "a"
@@ -45,10 +46,16 @@ class Log():
         """
 
         log = logging
-        log.basicConfig(filename=LOG_PATH, filemode=FILEMODE, encoding=ENCODE,
-                            format=FORMAT,
-                            level=logging.INFO
-                            )
+        try:
+            log.basicConfig(filename=LOG_PATH, filemode=FILEMODE, encoding=ENCODE,
+                                format=FORMAT,
+                                level=logging.INFO
+                                )
+        except FileNotFoundError:
+            log.basicConfig(filename=WINDOWS_CMD_LOG_PATH, filemode=FILEMODE, encoding=ENCODE,
+                                format=FORMAT,
+                                level=logging.INFO
+                                )
         log.info(s)
 
     def insert_log_error(self, var='') -> None:
@@ -73,7 +80,13 @@ class Log():
         s = str(traceback.format_exc())
         log = logging
 
-        log.basicConfig(filename=LOG_PATH, filemode=FILEMODE, encoding=ENCODE,
+        try:
+            log.basicConfig(filename=LOG_PATH, filemode=FILEMODE, encoding=ENCODE,
+                            format=FORMAT,
+                            level=logging.ERROR
+                            )
+        except FileNotFoundError:
+            log.basicConfig(filename=WINDOWS_CMD_LOG_PATH, filemode=FILEMODE, encoding=ENCODE,
                             format=FORMAT,
                             level=logging.ERROR
                             )
