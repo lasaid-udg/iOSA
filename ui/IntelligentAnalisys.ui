@@ -946,6 +946,13 @@ border-color: rgb(37, 255, 26);</string>
           </property>
          </widget>
         </item>
+        <item row="9" column="15" colspan="3">
+         <widget class="QPushButton" name="rangesSettingsPushButton">
+          <property name="text">
+           <string>Range Settings</string>
+          </property>
+         </widget>
+        </item>
        </layout>
       </item>
      </layout>

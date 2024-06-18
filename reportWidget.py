@@ -506,12 +506,12 @@ class ReportFormWidget(QWidget):
 
     def osa_file_loaded(self):
         self.editEDFFileButton.setStyleSheet("background-color: rgb(0,255,0);")
-        self.editEDFFileButton.setText("Archivo OSA Cargado")
+        self.editEDFFileButton.setText("OSA File Uploaded")
 
         if not self._is_edit:
             msg = QMessageBox()
-            msg.setWindowTitle("Archivo Cargado")
-            msg.setText("Archivo OSA cargado")
+            msg.setWindowTitle("File Uploaded")
+            msg.setText("OSA File Uploaded")
             msg.exec_()
 
     def __pdf_data_extraction_error(self):

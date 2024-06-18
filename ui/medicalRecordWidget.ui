@@ -118,7 +118,7 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
         <property name="geometry">
          <rect>
           <x>0</x>
-          <y>-3043</y>
+          <y>-784</y>
           <width>1135</width>
           <height>3718</height>
          </rect>
@@ -1794,7 +1794,7 @@ QSlider::handle:horizontal {
                         <item row="1" column="1" alignment="Qt::AlignRight">
                          <widget class="QLabel" name="hypertensionYesLabel">
                           <property name="text">
-                           <string>SI</string>
+                           <string>YES</string>
                           </property>
                          </widget>
                         </item>
@@ -1857,7 +1857,7 @@ QSlider::handle:horizontal {
                         <item row="1" column="1" alignment="Qt::AlignRight">
                          <widget class="QLabel" name="exsomkerYesLabel">
                           <property name="text">
-                           <string>SI</string>
+                           <string>YES</string>
                           </property>
                          </widget>
                         </item>
@@ -1940,7 +1940,7 @@ QSlider::handle:horizontal {
                         <item row="1" column="1" alignment="Qt::AlignRight">
                          <widget class="QLabel" name="smokerYesLabel">
                           <property name="text">
-                           <string>SI</string>
+                           <string>YES</string>
                           </property>
                          </widget>
                         </item>
@@ -2030,7 +2030,7 @@ QSlider::handle:horizontal {
                         <item row="1" column="1" alignment="Qt::AlignRight">
                          <widget class="QLabel" name="oxigenUseYesLabel">
                           <property name="text">
-                           <string>SI</string>
+                           <string>YES</string>
                           </property>
                          </widget>
                         </item>
@@ -2132,7 +2132,7 @@ QSlider::handle:horizontal {
                         <item row="1" column="1" alignment="Qt::AlignRight">
                          <widget class="QLabel" name="snoringYesLabel">
                           <property name="text">
-                           <string>SI</string>
+                           <string>YES</string>
                           </property>
                          </widget>
                         </item>
@@ -2202,7 +2202,7 @@ QSlider::handle:horizontal {
                         <item row="1" column="1" alignment="Qt::AlignRight">
                          <widget class="QLabel" name="witnessedApneasYesLabel">
                           <property name="text">
-                           <string>SI</string>
+                           <string>YES</string>
                           </property>
                          </widget>
                         </item>
@@ -2272,7 +2272,7 @@ QSlider::handle:horizontal {
                         <item row="1" column="1" alignment="Qt::AlignRight">
                          <widget class="QLabel" name="chronicFatigueYesLabel">
                           <property name="text">
-                           <string>SI</string>
+                           <string>YES</string>
                           </property>
                          </widget>
                         </item>

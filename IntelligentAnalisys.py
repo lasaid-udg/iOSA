@@ -936,7 +936,7 @@ class IntelligentAnalisys(QWidget):
     
     def __set_model(self):
         self._model.setHorizontalHeaderLabels(
-            ['Soporte Mínimo', "Confianza", 'Antecedentes', 'Consecuentes'])
+            ['Support', "Confidence", 'Antecedent', 'Consequent'])
         self._filter_proxy_model.setSourceModel(self._model)
         self._filter_proxy_model.setFilterCaseSensitivity(False)
         self._filter_proxy_model.setFilterKeyColumn(2)
@@ -970,25 +970,25 @@ class IntelligentAnalisys(QWidget):
     
     def __no_option_selected_message(self):
         msg = QMessageBox()
-        msg.setWindowTitle("Seleccion de Opción")
-        msg.setText("Favor de seleccionar una opción\npara iniciar el análisis.")
+        msg.setWindowTitle("Option Selection")
+        msg.setText("Please select an option\nto start the analysis.")
         msg.exec_()
 
     def __filters_applied_msg(self) -> None:
         msg = QMessageBox()
-        msg.setWindowTitle("Filtros Aplicados")
-        msg.setText("Los filtros se han configurado\ncorrectamente.")
+        msg.setWindowTitle("Applied Filters")
+        msg.setText("The filters have been configured\ncorrectly.")
         msg.exec_()
     
     def __analisys_error_msg(self) -> None:
         msg = QMessageBox()
-        msg.setWindowTitle("Error de Análisis")
-        msg.setText("Se a producido un error con los parámetros especificados.")
+        msg.setWindowTitle("Analysis Error")
+        msg.setText("An error has occurred with the specified parameters.")
         msg.exec_()
     
     def __rules_exported_msg(self) -> None:
         msg = QMessageBox()
-        msg.setWindowTitle("Proceso Terminado")
+        msg.setWindowTitle("Finished Process")
         msg.setText("Las reglas se han exportado correctamente.")
         msg.exec_()
 

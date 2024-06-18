@@ -127,7 +127,7 @@ class OsaFile(QWidget):
 
     def osa_file_loaded(self):
         self.editEDFFileButton.setStyleSheet("background-color: rgb(0,255,0);")
-        self.editEDFFileButton.setText("Archivo OSA Cargado")
+        self.editEDFFileButton.setText("OSA File Uploaded")
 
 
     def check_loaded_osa_file(self):

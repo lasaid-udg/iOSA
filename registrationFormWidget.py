@@ -180,9 +180,9 @@ class RegistrationFormWidget(QWidget):
 
     def __nss_already_exist_alert(self) -> None:
         msg = QMessageBox()
-        msg.setWindowTitle("NSS Existente")
+        msg.setWindowTitle("Duplicated NSS")
 
-        msg.setText("El NSS ingresado ya existe\n" +
+        msg.setText("The provided NSS already exists:\n" +
                     self.nss.text() + self.nssCode.text())
 
         msg.exec_()
