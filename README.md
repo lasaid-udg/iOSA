@@ -10,7 +10,7 @@ iOSA is designed to manage patient profiles, store data related to OSA, export t
 ### 1. Python
 The system requires Python 3.9.10 version. It can be downloaded from [here](https://www.python.org/downloads/release/python-3910/).
 
-If you have problems installing Python, please refer to the Python installation section of the [iOSA_Installation_guide_v2](iOSA_Installation_guide_v2.pdf) manual.
+If you have problems installing Python, please refer to the Python installation section of the [iOSA_Installation_guide_v2](iOSA_Installation_guide_v3.pdf) manual.
 
 ### 2. MySQL
 The core database is MySQL; an official release can be downloaded from [here](https://dev.mysql.com/downloads/installer/).
